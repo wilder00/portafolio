@@ -1,0 +1,1 @@
+este es un archivo para que la carpeta de imagenes sea reconocida por git

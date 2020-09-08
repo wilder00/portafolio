@@ -1,0 +1,122 @@
+/*@font-face {
+    font-family: Kanit;
+    src: url('../fonts/Kanit-Light.ttf');
+}
+*/
+
+/*
+fonts{
+    font-family: 'Oxanium', sans-serif;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+*/
+body{
+    margin: 0;
+    color: white;
+}
+
+
+.nav{
+    background: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    /*font-family: 'Oxanium', sans-serif;*/
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    z-index: 20;
+
+    /*margin-bottom: -70px;*/
+}
+.nav__ul{
+    
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    height: inherit;
+}
+.nav__li{
+    list-style: none;
+    
+    height: inherit;
+}
+.nav__a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    height: inherit;
+}
+.nav__a:hover{
+    color: white;
+    background-color: rgba(24, 23, 23, 0.8);
+    font-weight: bolder;
+}
+
+.header{
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 600px;
+    overflow: hidden;
+    margin-top: -70px;
+    position: relative;
+}
+.header__figure{
+    margin: 0;
+    position: absolute;
+    z-index: -10;
+    
+}
+.header__img{
+    width: 100%;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+}
+.header__hero{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    /*background-color: rgba(155, 25, 30, 0.5);*/
+}
+
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.hero__h1{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.hero__p{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+}
+.hero__button{
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+}
+
+.pruebalargo{
+height: 1200px;
+}
