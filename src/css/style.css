@@ -38,9 +38,9 @@ body{
     /*margin-bottom: -70px;*/
 }
 .nav__ul{
-    
+    min-width: 600px;
     display: flex;
-
+    justify-content: center;
     margin: 0;
     padding: 0;
 
@@ -48,21 +48,27 @@ body{
 }
 .nav__li{
     list-style: none;
-    
     height: inherit;
 }
+.nav__img{
+    height: 80px;
+}
+
 .nav__a{
     text-decoration: none;
     color: white;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0px 20px;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
 
     height: inherit;
 }
 .nav__a:hover{
     color: white;
-    background-color: rgba(24, 23, 23, 0.8);
+    background-color: rgba(70, 70, 70, 0.8);
     font-weight: bolder;
 }
 
@@ -77,10 +83,10 @@ body{
     margin: 0;
     position: absolute;
     z-index: -10;
-    
+    width: 100%;    
 }
 .header__img{
-    width: 100%;
+    width: inherit;
     mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
 }
 .header__hero{
