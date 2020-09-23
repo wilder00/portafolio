@@ -52,24 +52,44 @@ body{
 }
 .nav__img{
     height: 80px;
+    transform: scale(1);
+    transition: transform 0.5s ease 0s;
 }
+.nav__img:hover{
+    height: 80px;
+    transform: scale(1.1);
+    transition: transform 0.5s ease 0s;
+}
+
 
 .nav__a{
     text-decoration: none;
     color: white;
+    background-color: rgba(70, 70, 70, 0.0);
     display: flex;
     align-items: center;
     padding: 0px 20px;
     min-width: 120px;
     display: flex;
     justify-content: center;
+    transform: scale(1);
+    transition: transform 0.5s ease 0s;
 
     height: inherit;
 }
 .nav__a:hover{
     color: white;
     background-color: rgba(70, 70, 70, 0.8);
-    font-weight: bolder;
+    /* property   duration   timing-function   delay*/
+    transition: background-color 0.5s ease 0s;
+    /*   keyframe-name time  mode*/
+    transform: scale(1.2);
+    animation: mykey 0.3s ease;
+}
+@keyframes mykey{
+    0% {transform: scale(1);}
+    40%{transform: scale(0.95);}
+    100%{transform: scale(1.2);}
 }
 
 .header{
@@ -115,12 +135,29 @@ body{
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
 }
+.hero__strong{
+    color: rgba(255, 255, 255, 1);
+    transition: color 0.3s ease 0s;
+    
+}
+.hero__strong:hover{
+    color: rgba(0, 192, 192, 0.849);
+    transition: color 0.3s ease 0s;
+}
+
 .hero__button{
     background-color: rgba(0, 0, 0, 0.75);
     height: 30px;
     width: 100px;
     border-radius: 10px;
     color: white;
+    transform: scale(1);
+    transition: transform 0.5s ease 0s;
+}
+.hero__button:hover{
+    background-color: rgba(0, 139, 139, 0.849);
+    transform: scale(1.1);
+    transition: transform 0.3s ease 0s;
 }
 
 .pruebalargo{
