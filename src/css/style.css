@@ -14,11 +14,22 @@ fonts{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Work Sans', sans-serif;
 }
+los utilizados{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
 
 */
+
+html{
+    /* hace un desplazamiento suave */
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     color: white;
+    /*box-sizing: content-box;*/
 }
 
 
@@ -98,6 +109,7 @@ body{
     overflow: hidden;
     margin-top: -70px;
     position: relative;
+    border-bottom: 10px solid rgba(0, 139, 139, 0.849);
 }
 .header__figure{
     margin: 0;
@@ -120,7 +132,9 @@ body{
 }
 
 .container{
-    width: 1000px;
+    /*width: 1000px;*/
+    min-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -160,6 +174,75 @@ body{
     transition: transform 0.3s ease 0s;
 }
 
+/*--------------------------------------------------------------*/
+
+.portfolio{
+    width: 100%;
+    color: #333333;
+    font-family: 'Work Sans', sans-serif;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.portfolio__area{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.portfolio__h2{
+    color: #008b8b;
+    
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project{
+    height: 400px;
+    margin-top: 30px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+
+
+    background-color: rgb(184, 184, 184);
+}
+.project__details{
+    width: 50%;
+    margin: 30px 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.project__photo{
+    width: 50%;
+    height: inherit;
+    background-color: lightgreen;
+}
+
+
+.container{
+    /*background-color: rgba(172, 255, 47, 0.137);
+
+*/}
+
+
+
+
 .pruebalargo{
 height: 1200px;
 }
+
+
+
+
+
+
+
+
+
+/*
+colores usados:
+rgba(0, 192, 192, 0.849)
+rgba(0, 139, 139, 0.849)
+*/
