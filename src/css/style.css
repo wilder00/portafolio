@@ -161,10 +161,17 @@ body{
 
 .hero__button{
     background-color: rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+    border:1px solid white ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px auto;
     height: 30px;
     width: 100px;
     border-radius: 10px;
     color: white;
+    font-family: 'Work Sans', sans-serif;
     transform: scale(1);
     transition: transform 0.5s ease 0s;
 }
