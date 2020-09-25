@@ -29,7 +29,7 @@ html{
 body{
     margin: 0;
     color: white;
-    /*box-sizing: content-box;*/
+    /*box-sizing: border-box;*/
 }
 
 
@@ -202,9 +202,8 @@ body{
     display: flex;
     border-radius: 20px;
     overflow: hidden;
-
-
-    background-color: rgb(184, 184, 184);
+    /*background-color: #f0f0f0;*/
+    box-shadow: 6px 6px 6px 3px rgba(0, 0, 0, 0.2);
 }
 .project__details{
     width: 50%;
@@ -214,11 +213,59 @@ body{
     justify-content: center;
 }
 
+.project__link{
+    text-decoration: none;
+    color: #007979;
+    border: 1px solid #0079792d;
+    font-weight: 500;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition: transform 0.5s ease 0s;
+}
+.project__link:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease 0s;
+    color: white;
+    border-radius: 5px;
+    background-color: #007979;
+}
+
 .project__photo{
     width: 50%;
     height: inherit;
-    background-color: lightgreen;
 }
+.project__figure{
+    margin: 0;
+    position: relative;
+}
+.project__img{
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    z-index: 0;
+    
+}
+.project__figcaption{
+    position: relative;
+    font-size: 13px;
+    z-index: 10;
+    display: flex;
+    align-items: flex-end;
+    top: -200px;
+    color: #c7c7c7;
+    box-sizing: border-box;
+    height: 200px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+}
+
+
+
 
 
 .container{
@@ -238,7 +285,9 @@ height: 1200px;
 
 
 
-
+/*
+transform: skewY(20deg):
+*/
 
 
 /*
