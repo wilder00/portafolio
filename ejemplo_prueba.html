@@ -1,66 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Probando</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+  <title>Display IP Address</title>
+  <style>
+    body {
+      background-color: #FFCC00;
+    }
 
-        .hero-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./src/img/code_computing.jpg");
-            height: 50%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-        }
+    h1 {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 140px;
+      font-size: 60px;
+      margin: -15px;
+    }
 
-        .hero-text {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-        }
-
-        .hero-text button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 10px 25px;
-            color: black;
-            background-color: #ddd;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .hero-text button:hover {
-            background-color: #555;
-            color: white;
-        }
-        
-        .contenido{
-            height: 1200px;
-        }
-    </style>
+    p {
+      font-family: sans-serif;
+      color: #907400;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
+  <h1 id=ipText></h1>
+  <p>( This is your IP address...probably :P )</p>
+  <script>
+    /*
+    fetch("https://ipinfo.io/json")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (myJson) {
+        document.querySelector("#ipText").innerHTML = myJson.ip;
+      })
+      .catch(function (error) {
+        console.log("Error: " + error);
+      });
+      */
 
-    <div class="hero-image">
-        <div class="hero-text">
-            <h1 style="font-size:50px">I am John Doe</h1>
-            <p>And I'm a Photographer</p>
-            <button>Hire me</button>
-        </div>
-    </div>
-
-    <p>Page Content..</p>
-    <div class="contenido">contenido</div>
+        var req = new XMLHttpRequest();
+        req.open('GET', 'https://rickandmortyapi.com/api/character/1/', true);
+        req.onreadystatechange = function (aEvt) {
+            if (req.readyState == 4) {
+                if(req.status == 200)
+                console.log(req.responseText);
+                else
+                console.log("Error loading page\n");
+            }
+        };
+        req.send(null); 
+  </script>
 </body>
+
 </html>

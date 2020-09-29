@@ -31,6 +31,26 @@ body{
     color: white;
     /*box-sizing: border-box;*/
 }
+body::-webkit-scrollbar {
+    background-color: #d8d8d8;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #007979;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+}
+  
+body::-webkit-scrollbar-track {
+    background-color: #d6d6d6;
+    border-radius: 25px;
+}
+  
+body::-webkit-scrollbar-track:hover {
+    background-color: #dadada;
+    border-radius: 5px;
+}
+
 p{
     font-family: 'Work Sans', sans-serif;
 }
@@ -221,7 +241,8 @@ h5{
 }
 
 .project{
-    height: 400px;
+    
+    min-height: 400px;
     margin-top: 30px;
     display: flex;
     border-radius: 20px;
@@ -236,7 +257,9 @@ h5{
     flex-flow: column;
     justify-content: center;
 }
-
+.project__description{
+    text-align: justify;
+}
 .project__link{
     text-decoration: none;
     color: #007979;
@@ -259,20 +282,26 @@ h5{
 
 .project__photo{
     width: 50%;
-    height: inherit;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .project__figure{
     margin: 0;
-    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
 }
 .project__img{
     object-fit: cover;
+    min-height: 400px;
     width: 100%;
-    height: 400px;
+    height: auto;
     position: relative;
+    /*border-radius: 20px;*/
     z-index: 0;
-    
 }
+
 .project__figcaption{
     position: relative;
     font-size: 13px;
@@ -280,11 +309,15 @@ h5{
     display: flex;
     align-items: flex-end;
     top: -200px;
+    margin-bottom: -200px;
     color: #c7c7c7;
     box-sizing: border-box;
     height: 200px;
     padding-left: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 50px;/*
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    */
     background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
 }
 
