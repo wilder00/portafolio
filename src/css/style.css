@@ -27,18 +27,19 @@ html{
 }
 
 body{
-    background-color: #f4f4f4;
+    background-color: #ECEEF5;
     margin: 0;
     color: white;
     /*box-sizing: border-box;*/
 }
 body::-webkit-scrollbar {
-    background-color: #d8d8d8;
+    background-color: #cfd5e5;
 }
   
 body::-webkit-scrollbar-thumb {
     background-color: #007979;
-    border: 1px solid #ffffff;
+    background-color: #000000;
+    border: 1px solid #9e6c0e;
     border-radius: 25px;
 }
   
@@ -104,12 +105,13 @@ h5{
     height: inherit;
 }
 .nav__img{
-    height: 80px;
+    /*height: 80px;*/
+    height: 40px;
     transform: scale(1);
     transition: transform 0.5s ease 0s;
 }
 .nav__img:hover{
-    height: 80px;
+    /*height: 80px;*/
     transform: scale(1.1);
     transition: transform 0.5s ease 0s;
 }
@@ -132,7 +134,8 @@ h5{
 }
 .nav__a:hover{
     color: white;
-    background-color: rgba(70, 70, 70, 0.8);
+    background-color: #4c5769cc;
+    /*background: linear-gradient( #3c72ef55, #eea31600);;
     /* property   duration   timing-function   delay*/
     transition: background-color 0.5s ease 0s;
     /*   keyframe-name time  mode*/
@@ -151,7 +154,7 @@ h5{
     overflow: hidden;
     margin-top: -70px;
     position: relative;
-    border-bottom: 10px solid rgba(0, 139, 139, 0.849);
+    border-bottom: 10px solid #00a0a0d8;
 }
 .header__figure{
     margin: 0;
@@ -192,19 +195,21 @@ h5{
     font-size: 20px;
 }
 .hero__strong{
-    color: #00c0c0d8;
+    /*color: #00c0c0d8;*/
+    color: #3c72ef;
     transition: color 0.3s ease 0s;
     
 }
 .hero__strong:hover{
-    color: #00d8d8;
+    /*color: #00c0c0;*/
+    color: #c68712;
     transition: color 0.3s ease 0s;
 }
 
 .hero__button{
     background-color: rgba(0, 0, 0, 0.75);
     text-decoration: none;
-    border:1px solid white ;
+    border:1px solid #9e6c0e ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,7 +223,9 @@ h5{
     transition: transform 0.5s ease 0s;
 }
 .hero__button:hover{
-    background-color: rgba(0, 139, 139, 0.849);
+    background-color: #008080d8;
+    background-color: #9e6c0ed8;
+    background-color: #c68712;
     transform: scale(1.1);
     transition: transform 0.3s ease 0s;
 }
@@ -227,7 +234,7 @@ h5{
 
 .portfolio{
     width: 100%;
-    color: #333333;
+    color: #292f39;
     font-family: 'Work Sans', sans-serif;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -238,11 +245,11 @@ h5{
 }
 
 .portfolio__h2{
-    color: #008b8b;
+    color: #008080;
 }
 
 .project{
-    background-color: #fafafa;
+    background-color: #f7f7ff;
     min-height: 400px;
     margin-top: 30px;
     display: flex;
@@ -251,7 +258,13 @@ h5{
     /*background-color: #f0f0f0;*/
     box-shadow: 6px 6px 6px 3px rgba(0, 0, 0, 0.2);
 }
+.project__name{
+    color: #3c72ef;
+}
 .project__details{
+    background-image: url(https://dl.dropboxusercontent.com/s/9hwnlx3cdu5v79z/lineas_de_puntos.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
     width: 50%;
     margin: 30px 50px;
     display: flex;
@@ -262,6 +275,7 @@ h5{
     text-align: justify;
 }
 .project__link{
+    background-color: #f7f7ffea;
     text-decoration: none;
     color: #007979;
     border: 1px solid #0079792d;
@@ -271,14 +285,14 @@ h5{
     justify-content: center;
     align-items: center;
     transform: scale(1);
-    transition: transform 0.5s ease 0s;
+    transition: transform 0.5s ease 0s, color 0.5s ease 0s;
 }
 .project__link:hover{
     transform: scale(1.1);
-    transition: transform 0.5s ease 0s;
+    transition: transform 0.5s ease 0s, background-color 0.5s ease 0s;
     color: white;
     border-radius: 5px;
-    background-color: #007979;
+    background-color: #eea316;
 }
 
 .project__photo{
@@ -311,7 +325,7 @@ h5{
     align-items: flex-end;
     top: -200px;
     margin-bottom: -200px;
-    color: #c7c7c7;
+    color: #cfd5e5;
     box-sizing: border-box;
     height: 200px;
     padding-left: 20px;
@@ -326,8 +340,12 @@ h5{
 
 .about-me{
     background-color: #007979;
+    background-color: #284c9f;
+    background-image: url(https://dl.dropboxusercontent.com/s/nphzds885ryx26q/lineas_de_fondo_hexagonos.svg);
+    background-size: 100%;
+    background-position: center;
     width: 100%;
-    color: #ffffff;
+    color: #f7f7ff;
     font-family: 'Work Sans', sans-serif;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -345,6 +363,9 @@ h5{
     transform: skewY(-1.5deg);
     border: 2px solid rgba(255, 255, 255, 0.171);
     padding: 60px 10px;
+}
+.about-me__h2{
+    color: #eea316;
 }
 .about-me__description{
     width: 700px;
@@ -372,7 +393,7 @@ h5{
 
 
 .studies{
-    color: #333333;
+    color: #3e4756;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -381,6 +402,9 @@ h5{
 .studies__area{
     margin-left: 50px;
     margin-right: 50px;
+}
+.studies__h2{
+    color: #008080;
 }
 .studies__description{
     width: 100%;
@@ -396,7 +420,7 @@ h5{
 }
 
 .card1{
-    background-color: #fafafa;
+    background-color: #f7f7ff;
     width: 300px;
     height: 330px;
     margin: 20px;
@@ -462,23 +486,25 @@ h5{
 .card1__title{
     width: 200px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 500;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;   
+    text-align: center;
+    color: #3c72ef;
 }
 
 .card1__description{
-    font-size: 12px;
+    font-size: 14px;
     margin: 3px 15px;
+    color: #3e4756;
 }
 
 /*------------------------------------------------------------------------*/
 
 .contact-me{
     background-color: #007979;
-    color: #ffffff;
+    color: #f7f7ff;
     font-family: 'Work Sans', sans-serif;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -505,13 +531,13 @@ h5{
     filter: invert(0.1) sepia(1) hue-rotate(180deg) saturate(100%);
 }
 .contact-me__info{
-    color: rgb(235, 235, 235);
+    color: #eceef5;
     text-decoration: none;
     font-family: 'Work Sans', sans-serif;
 }
 .contact-me__info:hover{
     /*color: rgb(255, 0, 0);*/
-    color: white;
+    color: #eea316;
     text-decoration: underline ;
 }
 
@@ -519,7 +545,9 @@ h5{
 
 .footer{
     background-color: #007979;
-    color: #ffffff;
+    background-image: url(https://dl.dropboxusercontent.com/s/znvlcnvj7cz1ipn/lineas_de_puntos_largo.svg);
+    background-size: 1920px;
+    color: #f7f7ff;
     font-family: 'Work Sans', sans-serif;
     margin-top: -60px;
     padding-top: 100px;
@@ -531,8 +559,10 @@ h5{
     width: 700px;
     margin: 0 auto;
 }
-.footer_p{
+.footer__p{
     font-family: 'Work Sans', sans-serif;
+    display: block;
+    background-color: #007979;
 }
 
 
