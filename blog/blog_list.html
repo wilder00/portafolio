@@ -6,7 +6,8 @@
 	<meta property="fb:app_id" content="{2465508580424949}"/>
 	<!-- Fin moderar plugin de facebook-->
 	<title>Wilder Trujillo</title>
-	<link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/blog_list_style.css">
 	<link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.png" type="image/png">
 	
 
@@ -35,15 +36,15 @@
 			</a>
 		</figure>
 		<ul class="nav__ul">
-			<li class="nav__li"><a class="nav__a" href="#about-me">Acerca de Mi</a></li>
-			<li class="nav__li"><a class="nav__a" href="#portfolio">Portafolio</a></li>
-			<li class="nav__li"><a class="nav__a" href="#studies">Estudios</a></li>
+			<li class="nav__li"><a class="nav__a" href="../#about-me">Acerca de Mi</a></li>
+			<li class="nav__li"><a class="nav__a" href="../#portfolio">Portafolio</a></li>
+			<li class="nav__li"><a class="nav__a" href="../#studies">Estudios</a></li>
 			<li class="nav__li"><a class="nav__a" href="#contact-me">Contactame</a></li>
-			<li class="nav__li"><a class="nav__a" href="blog/blog_list.html">Blog</a></li>
+			<li class="nav__li nav__li--focused"><a class="nav__a" href="./blog_list.html" >Blog</a></li>
 		</ul>
 	</nav>
 
-	<header class="header">
+    <header class="header">
 		<figure class="header__figure">
 			<img class="header__img" src="https://dl.dropboxusercontent.com/s/o7ywwi46tvnkg3o/code_computing.jpg" alt="foto de wilder">
 			<figcaption class="header__figcaption"></figcaption>
@@ -52,63 +53,13 @@
 		<div class="header__hero">
 
 			<div class="container">	
-				<h1 class="hero__h1"> Me llamo <strong class="hero__strong">Wilder</strong></h1>
-				<p class="hero__p">y soy programador</p>
-				<!--button class="hero__button" onclick="#portfolio">Más</button-->
-				<a class="hero__button" href="#portfolio"> Más </a>
+				<h1 class="hero__h1"> Mi Blog</h1>
 			</div>
 		</div>
 
 	</header>
 
-	<!-- Portafolio ----------------------------------------------------------------------------------------------->
 
-
-	<section id="portfolio" class="portfolio">
-		<div class="container">
-			<div class="portfolio__area">
-				<h2 class="portfolio__h2">Portafolio</h2>
-				<p class="portfolio__description">
-					Este es un portafolio destinado a mostrar algunos de los projectos
-					que he logrado realizar en este año 2020.
-				</p>
-				<div id="portfolio-container" class="prortfolio_container">
-					<!-- A quí se completa con Javascript los proyectos-->
-					
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-	<!-- About me -------------------------------------------------------------------->
-	<section id="about-me" class="about-me">
-		<div class="container">
-			<article class="about-me__area">
-				<div class="about-me__description">
-					<h2 class="about-me__h2">ACERCA DE MI</h2>
-					<p class="about-me__p">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam massa, semper et nisl sed,
-						lobortis scelerisque diam. Nulla facilisi. Praesent vel dolor nec nulla ultricies pellentesque
-						sollicitudin ac nisl. Nulla efficitur lacinia purus, vitae tincidunt mi tristique in. Proin
-						laoreet erat a nisi commodo tempus. Fusce placerat diam quis nisl gravida, quis semper purus
-						tincidunt. Donec vitae commodo ex. Mauris tempor feugiat euismod. Class aptent taciti sociosqu
-						ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean et varius tortor.
-					</p>
-				</div>
-				<div class="about-me__photo">
-					<figure class="about-me__figure">
-						<img src="https://dl.dropboxusercontent.com/s/2ka2gd5n0d4v331/wilder_photo.png" alt="" class="about-me__img">
-					</figure>
-				</div>
-
-			</article>
-		</div>
-	</section>
-
-
-	<!-- Estudios -------------------------------------------------------------------------------------------->
-	
 	<section id="studies" class="studies">
 		<div class="container">
 			<div class="studies__area">
@@ -119,6 +70,38 @@
 				</p>
 				<div id="studiesContainer" class="studies__container">
 					<!--Aqui entra los cards de estudies -->
+					<!--
+						// Simulate a mouse click:
+						window.location.href = "http://www.w3schools.com";
+
+						// Simulate an HTTP redirect: imposibilita dar el back
+						window.location.replace("http://www.w3schools.com");
+
+					-->
+
+					<div class="card1">
+						<a class="linkcard" href="2020/diciembre/3-primera_pagina_blog.html">
+							<figure class="card1__figure">
+								<figcaption class="card1__figcaption">
+									<h5 class="card1__h5"> ¿Por qué es dificil comenzar algo si sabemos que nos hará lo mejor? </h5>
+								</figcaption>
+								<img class="card1__img" src="https://dl.dropboxusercontent.com/s/o7ywwi46tvnkg3o/code_computing.jpg" alt="imagen de prueba">
+							</figure>
+							<div class="card1__details">
+								<div class="card1__description">
+									<p class="card1__p">
+										<small class="card1__date">Fecha Publicación: 3 de abril 2020</small>
+									</p>
+									<p class="card1__p">
+										Pequeño párrafo de introducción para comenzar
+										una serie de blogs en la que se comenta un poco
+										hasta por lo menos una pregunta que deja en curiosidad...
+									</p>
+								</div>
+							</div>
+						</a>
+                    </div>`
+
 					
 				</div>
 			</div>
@@ -156,6 +139,8 @@
 		</div>
 	</section>
 
+
+
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__area">
@@ -168,6 +153,9 @@
 
 	<script src="src/js/formato.js"></script>
 
+<!-- Script del chatbot-->
+
+<!-- fin de Script del chatbot-->
 
 
 </body>
