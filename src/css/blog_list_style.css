@@ -1,0 +1,28 @@
+
+
+.header{
+    background-color: #000000e7;
+    height: 180px;
+    overflow: hidden;
+    margin-top: -70px;
+    position: relative;
+    border-bottom: 10px solid #00a0a0d8;
+}
+.hero__h1{
+    margin-top: 100px;
+}
+
+.card1__h5{
+    padding: 10px;
+    text-align: center;
+    background: none;
+    /*background-color: #00000017;
+    /*background: #284c9f00;*/
+    border-bottom: 10px solid #c68712;
+}
+.card1__p{
+    font-size: medium;
+}
+.linkcard{
+    text-decoration: none;
+}

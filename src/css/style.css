@@ -104,6 +104,15 @@ h5{
     list-style: none;
     height: inherit;
 }
+.nav__li--focused{
+    background-color: #3c72ef8c;
+    transition: background-color 0.5s ease 0s;
+}
+.nav__li--focused:hover{
+    background-color: #3c72ef00;
+    transition: background-color 0.5s ease 0s;
+}
+
 .nav__img{
     /*height: 80px;*/
     height: 40px;
@@ -124,7 +133,7 @@ h5{
     display: flex;
     align-items: center;
     padding: 0px 20px;
-    min-width: 120px;
+    min-width: 100px;
     display: flex;
     justify-content: center;
     transform: scale(1);
@@ -273,6 +282,8 @@ h5{
 }
 .project__description{
     text-align: justify;
+    font-weight: 390;
+    color: black;
 }
 .project__link{
     background-color: #f7f7ffea;
@@ -347,6 +358,8 @@ h5{
     width: 100%;
     color: #f7f7ff;
     font-family: 'Work Sans', sans-serif;
+    font-size: larger;
+    font-weight: 390;
     padding-top: 50px;
     padding-bottom: 50px;
     transform: skewY(1.5deg);
@@ -409,6 +422,8 @@ h5{
 .studies__description{
     width: 100%;
     font-size: 18px;
+    font-weight: 390;
+    color: black;
 }
 
 .studies__container{

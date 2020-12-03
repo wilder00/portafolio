@@ -1,0 +1,47 @@
+
+.header{
+    background-color: #000000e7;
+    height: 80px;
+    border-bottom: 10px solid #00a0a0d8;
+}
+.page{
+    /*border: 3px solid black;*/
+    max-width: 1200px;
+    min-height: 300px;
+    margin: 0 auto;
+}
+
+.page__content{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.page__title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: xx-large;
+    font-weight: 700;
+    color: #3c72ef;
+    color: #284c9f;
+    display: flex;
+}
+.page__main-figure{
+    margin: 60px 0;
+}
+.page__main-img{
+    width: 100%;
+}
+
+.page__p{
+    font-family: 'Work Sans', sans-serif;
+    font-size: larger;
+    font-weight: 390;
+    color: black;
+}
+.space{
+    height: 35px;
+    width: 100%;
+}
+.page__tags{
+    text-align: right;
+}
+.comments{
+}
