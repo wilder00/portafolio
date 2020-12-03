@@ -4,11 +4,13 @@
 	<!-- Identificado:0000-->
 
 	<meta charset="utf-8"/>
-	<!-- Para moderar Plugin de facebook-->
-	<meta property="fb:app_id" content="{2465508580424949}"/>
-	<!-- Fin moderar plugin de facebook-->
+	<!--Moderar Facebook comments-->
+	<meta property="fb:app_id" content="2465508580424949"/>	
+	<!-- Fin de moderar facebook comments-->
+
 	<title>Wilder Trujillo</title>
-    <link rel="stylesheet" href="../../../src/css/style.css">
+	<link rel="stylesheet" href="../../../src/css/style.css">
+	
     <!--link rel="stylesheet" href="../../../src/css/blog_list_style.css"-->
     <link rel="stylesheet" href="../../../src/css/blog_style.css">
 	<link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.png" type="image/png">
@@ -30,6 +32,11 @@
 </head>
 
 <body>
+	<!-- Script del comentario facebook-->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v9.0&appId=244048623784075&autoLogAppEvents=1" nonce="TEtqZYov"></script>
+	<!--Fin de script de comentario para facebook-->
+	
 	<nav class="nav">
 		<figure class="nav__figure">
 			<a href="https://www.wildertrujillo.com">
@@ -125,11 +132,11 @@
                     </p>
 
                     <div class="page__details">
-                        <div class="page__tags"><small class="page__small">Starting, thinking</small></div>
+                        <div class="page__tags"><small class="page__small">Starting, thinking, debug</small></div>
                     </div>
                     <div class="space"></div>
 				    <div class="comments">
-                        <div class="fb-comments" data-href="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html" data-numposts="10" data-width=""></div>
+                        <div class="fb-comments" data-href="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html" data-numposts="10" data-width="100%"></div>
                     </div>
                 </div>
             </div>
@@ -182,12 +189,6 @@
 	</footer>
 
 	<script src="src/js/formato.js"></script>
-
-
-<!-- Script del comentario facebook-->
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v9.0&appId=2465508580424949&autoLogAppEvents=1" nonce="bxMTPf8W"></script>
-<!--Fin de script de comentario para facebook-->
-
+	
 </body>
 </html>
