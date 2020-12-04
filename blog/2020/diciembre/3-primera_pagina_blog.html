@@ -5,8 +5,8 @@
 
 	<meta charset="utf-8"/>
 	<!--Moderar Facebook comments-->
-	<!--meta property="fb:app_id" content="205876361068947"/-->
-	<meta property="fb:app_id" content="177295197436662"/>
+	<!--meta property="fb:app_id" content="205876361068947"/
+	<meta property="fb:app_id" content="1855828554564238"/>-->
 	<!-- Fin de moderar facebook comments-->
 
 	<!-- Meta data para reconocimiento al comparttir por redes sosciales -->
@@ -48,9 +48,28 @@
 
 <body>
 	<!-- Script del comentario facebook-->
-	<div id="fb-root"></div>
-	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v9.0&appId=177295197436662&autoLogAppEvents=1" nonce="2VVkuIts"></script>
-
+	
+	<script>
+		window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '1855828554564238',
+			cookie     : true,
+			xfbml      : true,
+			version    : 'v9.0'
+		});
+			
+		FB.AppEvents.logPageView();   
+			
+		};
+	
+		(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "https://connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<!--Fin de script de comentario para facebook-->
 	
 	<nav class="nav">
