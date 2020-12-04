@@ -11,13 +11,13 @@
 	<!-- Meta data para reconocimiento al comparttir por redes sosciales -->
 	<meta property="og:type" content="article" /><!-- articulo, video, website -->
 
-	<meta property="og:title" content="¿Cuanto se necesita para entender que necesitamos compartir lo poco que sabemos?" />
+	<meta property="og:title" content="No es fácil incorporar comentarios de facebook" />
 
-	<meta property="og:description" content="Lorem Lorem Lorem exacto, más Lorem ipsum ..." />
+	<meta property="og:description" content="No es Lorem Lorem Lorem exacto, más Lorem ipsum ..." />
 
-	<meta property="og:image" content="https://dl.dropboxusercontent.com/s/o7ywwi46tvnkg3o/code_computing.jpg" />
+	<meta property="og:image" content="https://eventwo.com/wp-content/uploads/2019/04/5-pasos@1x.png" />
 
-	<meta property="og:url" content="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html" />
+	<meta property="og:url" content="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog_2.html" />
 
 	<meta property="og:site_name" content="Wilder Trujillo" />
 	<!-- Fin Meta data para reconocimiento al comparttir por redes sociales -->
@@ -47,6 +47,9 @@
 
 <body>
 	<!-- Script del comentario facebook-->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v9.0&appId=1855828554564238&autoLogAppEvents=1" nonce="LxzSqOCs"></script>
+
 	<script>
 		window.fbAsyncInit = function() {
 		FB.init({
@@ -105,7 +108,7 @@
             <div class="page">
                 <div class="page__content">
                 
-                    <h2 class="page__title"> ¿Cuanto se necesita para entender que necesitamos compartir lo poco que sabemos? </h2>
+                    <h2 class="page__title"> No es fácil incorporar comentarios de facebook </h2>
 
                     <figure class="page__main-figure">
                         <img class="page__main-img" src="https://eventwo.com/wp-content/uploads/2019/04/5-pasos@1x.png" alt="foto de wilder">
@@ -168,7 +171,7 @@
                     </div>
                     <div class="space"></div>
 				    <div class="comments">
-                        <div class="fb-comments" data-href="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog_2.html" data-numposts="20" data-width="100%"></div>
+                        <div class="fb-comments" onclick="FB.AppEvents.logEvent('comments_clicked')" data-href="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog_2.html" data-numposts="20" data-width=""></div>
                     </div>
                 </div>
             </div>

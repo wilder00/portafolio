@@ -47,6 +47,8 @@
 
 <body>
 	<!-- Script del comentario facebook-->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v9.0&appId=1855828554564238&autoLogAppEvents=1" nonce="8rIVAdKL"></script>
 	
 	<script>
 		window.fbAsyncInit = function() {
@@ -170,7 +172,7 @@
                     </div>
                     <div class="space"></div>
 				    <div class="comments">
-                        <div class="fb-comments" data-href="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html" data-numposts="20" data-width="100%"></div>
+                        <div class="fb-comments" onclick="FB.AppEvents.logEvent('comments_clicked')" data-href="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog_2.html" data-numposts="20" data-width=""></div>
                     </div>
                 </div>
             </div>
