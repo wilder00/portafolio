@@ -1,14 +1,43 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+
 	<meta charset="utf-8"/>
-	<!--Moderar Facebook comments-->
+	<!-- start: Moderar Facebook comments-->
 	<meta property="fb:app_id" content="1855828554564238"/>
-	<!-- Fin de moderar facebook comments-->
+	<!-- fin: de moderar facebook comments-->
+
+	<!-- start: Meta data para reconocimiento para facebook -->
+	<meta property="og:url" 		content="https://www.wildertrujillo.com/" />
+	<meta property="og:type" 		content="website" /><!-- articulo, video, website -->
+	<meta property="og:title" 		content="Me llamo Wilder y soy programador" />
+	<meta property="og:description"	content="Te invito a ver mi portafolio y algunos post de mi blog" />
+	<meta property="og:image" 		content="" />
+	
+	<meta property="og:site_name" 	content="Wilder Trujillo" />
+	<!-- end: open graph metatag: https://ogp.me/#types -->
+
+	<!-- start: Metatags para twitter-->
+	<meta name="twitter:card" content="summary_large_image">
+	<!-- end: Fin metatag para twitter-->
+
+	<!-- start: Metatag para buscadores o bots-->
+	<meta name="title" content="Wilder Trujillo">
+	<meta name="description" content="Te invito a ver mi portafolio y algunos post de mi blog">
+	<meta name="keywords" content="Wilder,programador,portafolio, blog">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="Spanish">
+	<meta name="author" content="Wilder Trujillo">
+	<!-- end: Metatag para buscadores o bots-->
+
 	<title>Wilder Trujillo</title>
+
+	<!--start: css styles-->
 	<link rel="stylesheet" href="./src/css/style.css">
 	<link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.png" type="image/png">
-	
+	<link rel="stylesheet" href="./src/css/buttons_style.css">
+	<!-- end: css styles-->
 
 	<!-- Fonts-->
 	<!--
@@ -26,7 +55,7 @@
 </head>
 
 <body>
-	<!-- Script del comentario facebook-->
+	<!-- start: JS SDK facebook-->
 	<script>
 		window.fbAsyncInit = function() {
 		FB.init({
@@ -48,7 +77,7 @@
 		fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
-	<!--Fin de script de comentario para facebook-->
+	<!-- fin: de script de comentario para facebook-->
 
 	<nav class="nav">
 		<figure class="nav__figure">
@@ -79,14 +108,25 @@
 				<h1 class="hero__h1"> Me llamo <strong class="hero__strong">Wilder</strong></h1>
 				<p class="hero__p">y soy programador</p>
 				<!--button class="hero__button" onclick="#portfolio">Más</button-->
-				<a class="hero__button" href="#portfolio"> Más </a>
+				<a class="button1 button--black1" href="#portfolio"> Más </a>
 			</div>
 		</div>
 
 	</header>
 
-	<!-- Portafolio ----------------------------------------------------------------------------------------------->
+	<!-- boton para subir -->
+	<div id="go-up-button" class="go-up-button--right-buttom button--scale-0" onclick="topFunction()">
+    
+		<div  class="go-up-button button--black1 ">
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+		</div>
+		
+	</div>
 
+	<!-- portafolio ----------------------------------------------------------------------------------------------->
 
 	<section id="portfolio" class="portfolio">
 		<div class="container">
@@ -149,7 +189,7 @@
 		</div>
 	</section>
 
-
+	<!-- Contact me --------------------------------------------------------------------------------------------->
 	<section id="contact-me" class="contact-me">
 		<div class="container">
 			<article class="contact-me__area">
@@ -162,14 +202,14 @@
 					</figure>
 					
 					<figure  class="contact-me__social-media">
-						<img class="contact-me__net-icon" src="https://static-exp1.licdn.com/sc/h/1bt1uwq5akv756knzdj4l6cdc" alt="gmail">
+						<img class="contact-me__net-icon" src="https://static-exp1.licdn.com/sc/h/1bt1uwq5akv756knzdj4l6cdc" alt="linkedin">
 						<figcaption class="contact-me__net-name">
 							<a class="contact-me__info" href="https://www.linkedin.com/in/wilder-trujillo/" target="_blank">wilder-trujillo</a>
 						</figcaption>
 					</figure>
 
 					<figure  class="contact-me__social-media">
-						<img class="contact-me__net-icon" src="https://github.githubassets.com/favicons/favicon.svg" alt="gmail">
+						<img class="contact-me__net-icon" src="https://github.githubassets.com/favicons/favicon.svg" alt="github">
 						<figcaption class="contact-me__net-name">
 							<a class="contact-me__info" href="https://github.com/wilder00" target="_blank">wilder00</a>
 						</figcaption>
@@ -179,7 +219,8 @@
 			</article>
 		</div>
 	</section>
-
+	
+	<!-- footer ----------------------------------------------------------------------------------------------------->
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__area">
@@ -191,8 +232,7 @@
 	</footer>
 
 	<script src="src/js/formato.js"></script>
-
-
+	<script src="src/js/button-behaviors.js"></script>
 
 </body>
 </html>

@@ -169,9 +169,10 @@ h5{
     margin: 0;
     position: absolute;
     z-index: -10;
-    width: 100%;    
+    width: 100%;
 }
 .header__img{
+    /*box-sizing: content-box;*/
     width: inherit;
     mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
 }
@@ -215,29 +216,6 @@ h5{
     transition: color 0.3s ease 0s;
 }
 
-.hero__button{
-    background-color: rgba(0, 0, 0, 0.75);
-    text-decoration: none;
-    border:1px solid #9e6c0e ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0px auto;
-    height: 30px;
-    width: 100px;
-    border-radius: 10px;
-    color: white;
-    font-family: 'Work Sans', sans-serif;
-    transform: scale(1);
-    transition: transform 0.5s ease 0s;
-}
-.hero__button:hover{
-    background-color: #008080d8;
-    background-color: #9e6c0ed8;
-    background-color: #c68712;
-    transform: scale(1.1);
-    transition: transform 0.3s ease 0s;
-}
 
 /*--------------------------------------------------------------*/
 
