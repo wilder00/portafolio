@@ -1,4 +1,6 @@
-
+h5{
+    font-family: 'Work Sans', sans-serif;
+}
 
 .header{
     background-color: #000000e7;
@@ -11,6 +13,86 @@
 .hero__h1{
     margin-top: 100px;
 }
+
+.posts{
+    color: #3e4756;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.posts__area{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.posts__h2{
+    color: #008080;
+    font-family: 'Montserrat', sans-serif;
+}
+.posts__description{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 390;
+    color: black;
+}
+
+.posts__container{
+    margin-top: 25px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.filter{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #f7f7ff;
+    box-shadow: 6px 6px 6px 3px #00000033;
+    font-family: 'Work Sans', sans-serif;
+    overflow-y: hidden;
+    height: 0px;
+    transition: height 1s ease 0s;
+}
+
+.filter__title{
+    padding: 5px 15px;
+    font-size: 15px;
+}
+.filter__container{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+.filter__group1{
+    display: flex;
+    justify-content: space-around;
+}
+.filter__element{
+    /*border: 1px solid lightcoral;*/
+    margin: 15px;
+    margin-top: 0;
+}
+.filter__label2{
+    font-size: 14px;
+}
+.filter__input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.filter__tags{
+    margin: 10px 0;
+}
+.filter__checkbox{
+    display: inline-block;
+    width: 19%;
+}
+
 
 .card1__h5{
     padding: 10px;

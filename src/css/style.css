@@ -422,7 +422,7 @@ h5{
     overflow: hidden;
     box-sizing: border-box;
     transform: scale(1);
-    transition: transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s, height 0.5s ease 0s, width 0.5s ease 0s;
 }
 .card1:hover{
     transform: scale(1.05);
@@ -434,6 +434,7 @@ h5{
     position: relative;
     overflow: hidden;
     
+    transition: transform 0.3s ease 0s, height 0.5s ease 0s, width 0.5s ease 0s;
 }
 .card1__figcaption{
     position: absolute;
@@ -458,6 +459,8 @@ h5{
     text-shadow: 2px 2px 2px #000000, 3px 3px 2px #000000, 4px 4px 2px #000000,-3px -3px 4px #000000 ;
     /*text-shadow: 0 0 3px #000000, 0 0 5px #000000;*/
     box-sizing: border-box;
+
+    transition: transform 0.5s ease 0s, height 0.5s ease 0s, width 0.5s ease 0s;
 }
 .card1__img{
     width: 100%;
@@ -467,7 +470,6 @@ h5{
     object-position: center;
     transform: translatey(-25%);
 }
-
 .card1__details{
     width: 300px;
     height: 200px;
@@ -491,6 +493,13 @@ h5{
     font-size: 14px;
     margin: 3px 15px;
     color: #3e4756;
+}
+.card1__p{
+    margin-top: 2px;
+}
+.card1__tags{
+    color: #929292;
+    font-style: italic;
 }
 
 /*------------------------------------------------------------------------*/
