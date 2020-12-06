@@ -15,7 +15,6 @@
     width: 59px;
     height: 59px;
     border-radius: 25%;
-    transform: rotate(180deg);
 }
 
 .go-up-button__arrow {
@@ -31,7 +30,8 @@
 .go-up-button__arrow:first-child {
     display: block;
     position: absolute;
-    transform: rotate(225deg);
+    /*transform: rotate(225deg);*/
+    transform: rotate(135deg);
     left: 25%;
     bottom: 35%;
 }
@@ -39,7 +39,8 @@
 .go-up-button__arrow:nth-child(2) {
     display: block;
     position: absolute;
-    transform: rotate(135deg);
+    /*transform: rotate(135deg);*/
+    transform: rotate(45deg);
     left: 45%;
     bottom: 35%;
 }
@@ -47,7 +48,8 @@
 .go-up-button__arrow:nth-child(3) {
     display: block;
     position: absolute;
-    transform: rotate(225deg);
+    /*transform: rotate(225deg);*/
+    transform: rotate(135deg);
     left: 25%;
     bottom: 54%;
 }
@@ -55,25 +57,25 @@
 .go-up-button__arrow:nth-child(4) {
     display: block;
     position: absolute;
-    transform: rotate(135deg);
+    transform: rotate(45deg);
     left: 45%;
     bottom: 54%;
 }
 
 .go-up-button:hover .go-up-button__arrow:nth-child(1) {
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
 }
 
 .go-up-button:hover .go-up-button__arrow:nth-child(2) {
-    transform: rotate(315deg);
+    transform: rotate(225deg);
 }
 
 .go-up-button:hover .go-up-button__arrow:nth-child(3) {
-    transform: rotate(405deg);
+    transform: rotate(315deg);
 }
 
 .go-up-button:hover .go-up-button__arrow:nth-child(4) {
-    transform: rotate(-45deg);
+    transform: rotate(-135deg);
 }
 
 
