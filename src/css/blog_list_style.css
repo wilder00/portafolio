@@ -35,6 +35,58 @@ h5{
     font-weight: 390;
     color: black;
 }
+.options{
+    display: flex;
+    
+}
+
+.view-type{
+    background-color: #f7f7ff7c;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+.view-type--option{
+    background-color: #cfd5e5cb;
+    height: 35px;
+    width: 35px;
+    padding: 3px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    transform: scale(0.8);
+    transition: transform 0.3s ease 0s, box-shadow 0.3s ease 0s;
+}
+
+.view-type--option:hover{
+    transform: scale(1);
+    box-shadow: 3px 3px 3px 1px #00000033;
+}
+.view-type--selected{
+    transform: scale(1);
+    box-shadow: 3.5px 3.5px 3.5px 1.5px #00000033;
+}
+
+.view-type--block{
+    display: block;
+    width: 40%;
+    height: 40%;
+    background-color: #f7f7ff;
+    border-radius: 3px;
+}
+.view-type--list{
+    background-color: #f7f7ff;
+    width: 90%;
+    height: 15%;
+    border-radius: 3px;
+}
+
 
 .posts__container{
     margin-top: 25px;
@@ -102,9 +154,16 @@ h5{
     /*background: #284c9f00;*/
     border-bottom: 10px solid #c68712;
 }
+.card1__date{
+    font-size: 15px;
+}
+.card1__tags{
+    font-size: 15px;
+}
 .card1__p{
     font-size: medium;
 }
 .linkcard{
     text-decoration: none;
 }
+

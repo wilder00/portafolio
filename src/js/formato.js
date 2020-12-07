@@ -40,14 +40,17 @@ fetchData(API)
 
 */
 
+let indexPetitions = ()=>{
 const API = 'https://dl.dropboxusercontent.com/s/je93m93gb18ojlp/informacion.json'
 
 fetchData(API)
     .then(data => {
         let projects = data.projects
         let portfolio = document.getElementById('portfolio-container')
+        let htmlContent = "";
+        
         for (let project of projects) {
-            let projectHtml = `
+            let htmlContent = `
             <article class="project">
                 <div class="project__details">
                     <h3 class="project__name"> ${project.name} </h3>
@@ -73,17 +76,16 @@ fetchData(API)
                 </div>
                 
             </article>`
-            console.log(project);
             //console.log(portfolio.innerHTML);
-            portfolio.innerHTML += projectHtml;
+            portfolio.innerHTML += htmlContent;
 
         }
 
         /******* Rellenando parte de  estudios*/
-        let studies = data.studies
-        let studiesContainer = document.getElementById('studiesContainer')
+        let studies = data.studies;
+        let studiesContainer = document.getElementById('studiesContainer');
         for (let study of studies) {
-            let studyHtml = `
+            htmlContent = `
                 <div class="card1">
                     <figure class="card1__figure">
                         <figcaption class="card1__figcaption">
@@ -111,13 +113,78 @@ fetchData(API)
                 </div>`
                 
             //console.log(portfolio.innerHTML);
-            studiesContainer.innerHTML += studyHtml;
+            studiesContainer.innerHTML += htmlContent;
 
         }
         
 
     })
     .catch(err => console.log(err))
+/******* Rellenado parte de  estudios*/
+    
+}
 
+let dateNumberToString = date =>{
+    const MONTHS = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+    return `${date.getDate()} de ${MONTHS[date.getMonth()-1]} del ${date.getFullYear()}`
+}
 
-/******* Rellenando parte de  estudios*/
+// para extraer la parte de blogListPetitions que nos servirá para filtrar
+let setCardPosts = data =>{
+
+}
+
+/** PAra obtener las publicaciones de blog */
+let blogListPetitions = ()=>{
+    const URL = "https://dl.dropboxusercontent.com/s/nf60hpb352p7bpc/postsList.json"
+
+    fetchData(URL)
+        .then(data =>{
+            let posts = data.results;
+            let postsContainer = document.getElementById("postsContainer");
+            let filterTags = document.getElementById("filterTags");
+            let allTags = data.info.allTagsList;
+            let htmlContent;
+            //insertando tags en el filtro
+            allTags.forEach((element,index) => {
+                htmlContent=
+                `   <div class="filter__checkbox">
+						<input type="checkbox" id="${element}" class="label__check" onclick="toFilterCheckbox()" value="${index}" checked>
+						<label for="${element}" class="filter__label2">${element}</label>
+					</div>
+                `;
+                filterTags.innerHTML += htmlContent;
+            });
+
+            //insertando los cards de las publicaciones
+            for(let post of posts){
+                let tag = post.tag.map(tagId => allTags[tagId]);
+                let tagText = tag.join(", ");
+
+                htmlContent =
+                `   <a class="linkcard" href="${post.url}">
+						<div class="card1">
+							<figure class="card1__figure">
+								<figcaption class="card1__figcaption">
+									<h5 class="card1__h5">${post.title}</h5>
+								</figcaption>
+								<img class="card1__img" src="${post.img.url}" alt="${post.img.alt}">
+							</figure>
+							<div class="card1__details">
+								<div class="card1__description">
+									<p class="card1__p">
+										<small class="card1__date">Fecha: ${dateNumberToString(new Date(post.postDate))}</small>
+										<small class="card1__tags">Tags: ${tagText} </small>
+									</p>
+									<p class="card1__p">
+										${post.description}
+									</p>
+								</div>
+							</div>
+						</div>
+					</a>
+                `;
+                postsContainer.innerHTML += htmlContent;
+            }
+        })
+}

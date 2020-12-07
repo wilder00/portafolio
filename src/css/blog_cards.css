@@ -8,8 +8,7 @@
     height: 120px;
     display: flex;
     flex-flow: row;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 5px 0;
 }
 .card1__figure{
     width: 10%;

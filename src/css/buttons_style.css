@@ -112,18 +112,19 @@
     transform: scale(0);
 }
 
-
 .button2{
     height: 30px;
     width: 100px;
     border: 1px solid #ccc;
     border-radius: 15px;
-    display: flex;
+    display: inline-flex;
+    margin: auto 10px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin: 8px;
     outline: none;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 395;
 }
 .button2:hover{
     border: 1px solid #3c72ef;

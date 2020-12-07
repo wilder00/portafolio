@@ -20,17 +20,38 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+// to change card view
+let toChangeViewCard = (ob)=>{
+  let id = ob.getAttribute("id");
+  let styleTypeCard =  "view-type--option";
+  let styleTypeCardSelected ="view-type--option view-type--selected";
+
+  
+  //view-type--option
+  if(id === "cardBlockView"){
+    document.getElementById("cardListView").setAttribute("class", styleTypeCard);
+    ob.setAttribute("class", styleTypeCardSelected);
+    document.getElementById("cssCard").setAttribute('href', "");
+  }else{
+    document.getElementById("cardBlockView").setAttribute("class", styleTypeCard);
+    ob.setAttribute("class", styleTypeCardSelected);
+    document.getElementById("cssCard").setAttribute('href', "../src/css/blog_cards.css");
+  }
+
+}
+
+
 //to see filters
 let toSeeFilters = ()=>{
   if(!isFilterBoxVisible){
     document.getElementById("filterBox").style.height = '240px';
     document.getElementById("letSeeButton").textContent = 'Ocultar Filtro';
-    document.getElementById("cssCard").setAttribute('href', "");
     isFilterBoxVisible = true;
   }else{
     document.getElementById("filterBox").style.height = '0';
     document.getElementById("letSeeButton").innerText = 'Ver Filtros';
-    document.getElementById("cssCard").setAttribute('href', "../src/css/blog_cards.css");
     isFilterBoxVisible = false;
   }
 }
+
+//filter with checkbox
