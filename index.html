@@ -1,44 +1,90 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+
 	<meta charset="utf-8"/>
-	<!-- Para moderar Plugin de facebook-->
-	<meta property="fb:app_id" content="{2465508580424949}"/>
-	<!-- Fin moderar plugin de facebook-->
+	<!-- start: Moderar Facebook comments-->
+	<meta property="fb:app_id" content="1855828554564238"/>
+	<!-- fin: de moderar facebook comments-->
+
+	<!-- start: Meta data para reconocimiento para facebook -->
+	<meta property="og:url" 		content="https://www.wildertrujillo.com/" />
+	<meta property="og:type" 		content="website" /><!-- articulo, video, website -->
+	<meta property="og:title" 		content="Me llamo Wilder y soy programador" />
+	<meta property="og:description"	content="Te invito a ver mi portafolio y algunos post de mi blog" />
+	<meta property="og:image" 		content="" />
+	
+	<meta property="og:site_name" 	content="Wilder Trujillo" />
+	<!-- end: open graph metatag: https://ogp.me/#types -->
+
+	<!-- start: Metatags para twitter-->
+	<meta name="twitter:card" content="summary_large_image">
+	<!-- end: Fin metatag para twitter-->
+
+	<!-- start: Metatag para buscadores o bots-->
+	<meta name="title" content="Wilder Trujillo">
+	<meta name="description" content="Te invito a ver mi portafolio y algunos post de mi blog">
+	<meta name="keywords" content="Wilder,programador,portafolio, blog">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="Spanish">
+	<meta name="author" content="Wilder Trujillo">
+	<!-- end: Metatag para buscadores o bots-->
+
 	<title>Wilder Trujillo</title>
+
+	<!--start: css styles-->
 	<link rel="stylesheet" href="./src/css/style.css">
 	<link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.png" type="image/png">
-	
+	<link rel="stylesheet" href="./src/css/buttons_style.css">
+	<!-- end: css styles-->
 
-	<!-- Fonts-->
-	<!--
-	<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet"> 
-	-->
+	<!-- start: fonts-->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet"> 
-
+	<!-- end: fonts-->
 	
 
 </head>
 
 <body>
+	<!-- start: JS SDK facebook-->
+	<script>
+		window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '1855828554564238',
+			cookie     : true,
+			xfbml      : true,
+			version    : 'v9.0'
+		});
+			
+		FB.AppEvents.logPageView();   
+			
+		};
+	
+		(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "https://connect.facebook.net/es_LA/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<!-- end: de script de comentario para facebook-->
+
 	<nav class="nav">
 		<figure class="nav__figure">
-			<a href="/portafolio">
+			<a href="https://www.wildertrujillo.com/">
 				<!--img class="nav__img" src="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.png" alt="logo de Wilder"-->
 				<img class="nav__img" src="https://dl.dropboxusercontent.com/s/t5n37e74oz7i0mc/logo_wilder_blank.png" alt="logo de Wilder">
 				<figcaption class="nav__figcaption"></figcaption>
 			</a>
 		</figure>
 		<ul class="nav__ul">
-			<li class="nav__li"><a class="nav__a" href="#about-me">Acerca de Mi</a></li>
+			<li class="nav__li"><a class="nav__a" href="#about-me">Acerca de Mí</a></li>
 			<li class="nav__li"><a class="nav__a" href="#portfolio">Portafolio</a></li>
 			<li class="nav__li"><a class="nav__a" href="#studies">Estudios</a></li>
-			<li class="nav__li"><a class="nav__a" href="#contact-me">Contactame</a></li>
+			<li class="nav__li"><a class="nav__a" href="#contact-me">Contáctame</a></li>
 			<li class="nav__li"><a class="nav__a" href="blog/blog_list.html">Blog</a></li>
 		</ul>
 	</nav>
@@ -55,14 +101,25 @@
 				<h1 class="hero__h1"> Me llamo <strong class="hero__strong">Wilder</strong></h1>
 				<p class="hero__p">y soy programador</p>
 				<!--button class="hero__button" onclick="#portfolio">Más</button-->
-				<a class="hero__button" href="#portfolio"> Más </a>
+				<a class="button1 button--black1" href="#portfolio"> Más </a>
 			</div>
 		</div>
 
 	</header>
 
-	<!-- Portafolio ----------------------------------------------------------------------------------------------->
+	<!-- boton para subir -->
+	<div id="go-up-button" class="go-up-button--right-buttom button--scale-0" onclick="topFunction()">
+    
+		<div  class="go-up-button button--black1 ">
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+		</div>
+		
+	</div>
 
+	<!-- portafolio ----------------------------------------------------------------------------------------------->
 
 	<section id="portfolio" class="portfolio">
 		<div class="container">
@@ -86,7 +143,7 @@
 		<div class="container">
 			<article class="about-me__area">
 				<div class="about-me__description">
-					<h2 class="about-me__h2">ACERCA DE MI</h2>
+					<h2 class="about-me__h2">Acerca de Mí</h2>
 					<p class="about-me__p">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam massa, semper et nisl sed,
 						lobortis scelerisque diam. Nulla facilisi. Praesent vel dolor nec nulla ultricies pellentesque
@@ -125,29 +182,30 @@
 		</div>
 	</section>
 
-
+	<!-- Contact me --------------------------------------------------------------------------------------------->
 	<section id="contact-me" class="contact-me">
 		<div class="container">
 			<article class="contact-me__area">
 				<div class="contact-me__social-media-list">
-					<figure  class="contact-me__social-media">
-						<img class="contact-me__net-icon" src="https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon5.ico" alt="gmail">
-						<figcaption class="contact-me__net-name">
-							<a class="contact-me__info" href="mailto:nadie437@gmail.com">nadie437@gmail.com</a>
-						</figcaption>
-					</figure>
 					
 					<figure  class="contact-me__social-media">
-						<img class="contact-me__net-icon" src="https://static-exp1.licdn.com/sc/h/1bt1uwq5akv756knzdj4l6cdc" alt="gmail">
+						<img class="contact-me__net-icon" src="https://static-exp1.licdn.com/sc/h/1bt1uwq5akv756knzdj4l6cdc" alt="linkedin">
 						<figcaption class="contact-me__net-name">
 							<a class="contact-me__info" href="https://www.linkedin.com/in/wilder-trujillo/" target="_blank">wilder-trujillo</a>
 						</figcaption>
 					</figure>
 
 					<figure  class="contact-me__social-media">
-						<img class="contact-me__net-icon" src="https://github.githubassets.com/favicons/favicon.svg" alt="gmail">
+						<img class="contact-me__net-icon" src="https://github.githubassets.com/favicons/favicon.svg" alt="github">
 						<figcaption class="contact-me__net-name">
 							<a class="contact-me__info" href="https://github.com/wilder00" target="_blank">wilder00</a>
+						</figcaption>
+					</figure>
+					
+					<figure  class="contact-me__social-media">
+						<img class="contact-me__net-icon" src="https://static.xx.fbcdn.net/rsrc.php/yD/r/d4ZIVX-5C-b.ico" alt="facebook">
+						<figcaption class="contact-me__net-name">
+							<a class="contact-me__info" href="https://www.facebook.com/wildertrujillom" target="_blank">wildertrujillom</a>
 						</figcaption>
 					</figure>
 					
@@ -155,7 +213,8 @@
 			</article>
 		</div>
 	</section>
-
+	
+	<!-- footer ----------------------------------------------------------------------------------------------------->
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__area">
@@ -167,8 +226,9 @@
 	</footer>
 
 	<script src="src/js/formato.js"></script>
-
-
-
+	<script src="src/js/button-behaviors.js"></script>
+	<script>
+		indexPetitions();
+	</script>
 </body>
 </html>

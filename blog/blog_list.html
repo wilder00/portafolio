@@ -2,26 +2,27 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<!-- Para moderar Plugin de facebook-->
-	<meta property="fb:app_id" content="{2465508580424949}"/>
-	<!-- Fin moderar plugin de facebook-->
-	<title>Wilder Trujillo</title>
-    <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="stylesheet" href="../src/css/blog_list_style.css">
-	<link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.png" type="image/png">
-	
 
-	<!-- Fonts-->
-	<!--
-	<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet"> 
-	-->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet"> 
+	<!-- Metatag para buscadores o bots-->
+	<meta name="title" 			content="Articulos de mi blog | Wilder Trujillo">
+	<meta name="description" 	content="Te invito a ver algunos post en mi blog">
+	<meta name="keywords" 		content="blog,posts">
+	<meta name="robots" 		content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" 		content="Spanish">
+	<meta name="author" 		content="Wilder Trujillo">
+	<!-- FIN Metatag para buscadores o bots-->
 
+	<title>Articulos de mi blog | Wilder Trujillo</title>
+	<link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.png" type="image/png"/>
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/blog_list_style.css"/>
+	<link rel="stylesheet" href="../src/css/buttons_style.css">
+	<link rel="stylesheet" id="cssCard" href=" ">
+	<!-- start: fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"/> 
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet"/> 
+	<!-- end: fonts-->
 	
 
 </head>
@@ -29,7 +30,7 @@
 <body>
 	<nav class="nav">
 		<figure class="nav__figure">
-			<a href="/portafolio">
+			<a href="https://www.wildertrujillo.com">
 				<!--img class="nav__img" src="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.png" alt="logo de Wilder"-->
 				<img class="nav__img" src="https://dl.dropboxusercontent.com/s/t5n37e74oz7i0mc/logo_wilder_blank.png" alt="logo de Wilder">
 				<figcaption class="nav__figcaption"></figcaption>
@@ -38,7 +39,7 @@
 		<ul class="nav__ul">
 			<li class="nav__li"><a class="nav__a" href="../#about-me">Acerca de Mi</a></li>
 			<li class="nav__li"><a class="nav__a" href="../#portfolio">Portafolio</a></li>
-			<li class="nav__li"><a class="nav__a" href="../#studies">Estudios</a></li>
+			<li class="nav__li"><a class="nav__a" href="../#posts">Estudios</a></li>
 			<li class="nav__li"><a class="nav__a" href="#contact-me">Contactame</a></li>
 			<li class="nav__li nav__li--focused"><a class="nav__a" href="./blog_list.html" >Blog</a></li>
 		</ul>
@@ -53,23 +54,105 @@
 		<div class="header__hero">
 
 			<div class="container">	
-				<h1 class="hero__h1"> Mi Blog</h1>
+				<h1 class="hero__h1">Mi Blog</h1>
 			</div>
 		</div>
 
 	</header>
 
+	<!-- boton para subir -->
+	<div id="go-up-button" class="go-up-button--right-buttom button--scale-0" onclick="topFunction()">
+    
+		<div  class="go-up-button button--black1 ">
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+		</div>
+		
+	</div>
 
-	<section id="studies" class="studies">
+	<!-- Posts  -->
+	<section id="posts" class="posts">
 		<div class="container">
-			<div class="studies__area">
-				<h2 class="studies__h2"> Estudios </h2>
-				<p class="studies__description">
+			<div class="posts__area">
+				<h2 class="posts__h2"> Publicaciones </h2>
+				<p class="posts__description">
 					Muestro en dónde estoy estudiando y alguno de los cursos que he tomado recientemente
 					de forma externa a la universidad.
 				</p>
-				<div id="studiesContainer" class="studies__container">
-					<!--Aqui entra los cards de estudies -->
+
+				<!--Boton para ver filtros-->
+				<div class="options">
+					<button class="button2" id="letSeeButton" onclick="toSeeFilters()">
+						Ver Filtros
+					</button>
+					<div class="view-type">
+						<div class="view-type--option view-type--selected" id="cardBlockView" onclick="toChangeViewCard(this)">
+							<div class="view-type--block"></div>
+							<div class="view-type--block"></div>
+							<div class="view-type--block"></div>
+							<div class="view-type--block"></div>
+						</div>
+						<div class="view-type--option view-type--unselected" id="cardListView" onclick="toChangeViewCard(this)">
+							<div class="view-type--list"></div>
+							<div class="view-type--list"></div>
+							<div class="view-type--list"></div>
+							<div class="view-type--list"></div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="filter" id="filterBox">
+					<h5 class="filter__title">
+						Filtrar Publicaciones
+					</h5>
+					
+					<form class="filter__container">
+						<div class="filter__group1">
+							<div class="filter__element">
+								<label for="startDate" class="filter__label">Desde:</label>
+								<input class="filter__input" id="startDate" type="date" onchange="toFilterDate(this)" min="2020-12-01">
+							</div>
+	
+							<div class="filter__element">
+								<label for="endDate" class="filter__label">hasta:</label>
+								<input class="filter__input" id="endDate" type="date" onchange="toFilterDate(this)" min="2020-12-01">
+							</div>
+
+							<div class="filter__element">
+								<label for="orderBy" class="filter__label">ordenar por:</label>
+								<select class="filter__input" onchange="toOrderBy(this)" id="orderBy">
+									<option class="filter__option" value="newest">Más reciente</option>
+									<option class="filter__option" value="oldest">Más antiguo</option>
+								</select>
+
+							</div>
+						</div>
+
+						<div class="group2">
+							<div class="filter__element">
+								<label for="" class="filter__label"> Tags: </label>
+								<div id="filterTags" class="filter__tags">
+
+									<!-- Aquí los  checkbox para filtrar con el siguiente formato:
+									<div class="filter__checkbox">
+										<input type="checkbox" class="label__check" name="id1" value="value1">
+										<label for="id1" class="filter__label2">This is issssssd 1 </label>
+									</div>
+									-->
+
+	
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+
+				<div id="postsContainer" class="posts__container">
+					<!--Aqui entra los cards de post -->
 					<!--
 						// Simulate a mouse click:
 						window.location.href = "http://www.w3schools.com";
@@ -78,9 +161,10 @@
 						window.location.replace("http://www.w3schools.com");
 
 					-->
-
-					<div class="card1">
-						<a class="linkcard" href="2020/diciembre/3-primera_pagina_blog.html">
+					
+					<!--modelo de card post
+					<a class="linkcard" href="2020/diciembre/3-primera_pagina_blog.html">
+						<div class="card1">
 							<figure class="card1__figure">
 								<figcaption class="card1__figcaption">
 									<h5 class="card1__h5"> ¿Por qué es dificil comenzar algo si sabemos que nos hará lo mejor? </h5>
@@ -91,6 +175,7 @@
 								<div class="card1__description">
 									<p class="card1__p">
 										<small class="card1__date">Fecha Publicación: 3 de abril 2020</small>
+										<small class="card1__tags">Tags: tag1, tag2, tag3 y tag4</small>
 									</p>
 									<p class="card1__p">
 										Pequeño párrafo de introducción para comenzar
@@ -99,8 +184,11 @@
 									</p>
 								</div>
 							</div>
-						</a>
-                    </div>`
+						</div>`
+					</a>
+					-->
+					
+
 
 					
 				</div>
@@ -113,24 +201,25 @@
 		<div class="container">
 			<article class="contact-me__area">
 				<div class="contact-me__social-media-list">
+
 					<figure  class="contact-me__social-media">
-						<img class="contact-me__net-icon" src="https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon5.ico" alt="gmail">
-						<figcaption class="contact-me__net-name">
-							<a class="contact-me__info" href="mailto:nadie437@gmail.com">nadie437@gmail.com</a>
-						</figcaption>
-					</figure>
-					
-					<figure  class="contact-me__social-media">
-						<img class="contact-me__net-icon" src="https://static-exp1.licdn.com/sc/h/1bt1uwq5akv756knzdj4l6cdc" alt="gmail">
+						<img class="contact-me__net-icon" src="https://static-exp1.licdn.com/sc/h/1bt1uwq5akv756knzdj4l6cdc" alt="linkedin">
 						<figcaption class="contact-me__net-name">
 							<a class="contact-me__info" href="https://www.linkedin.com/in/wilder-trujillo/" target="_blank">wilder-trujillo</a>
 						</figcaption>
 					</figure>
 
 					<figure  class="contact-me__social-media">
-						<img class="contact-me__net-icon" src="https://github.githubassets.com/favicons/favicon.svg" alt="gmail">
+						<img class="contact-me__net-icon" src="https://github.githubassets.com/favicons/favicon.svg" alt="github">
 						<figcaption class="contact-me__net-name">
 							<a class="contact-me__info" href="https://github.com/wilder00" target="_blank">wilder00</a>
+						</figcaption>
+					</figure>
+					
+					<figure  class="contact-me__social-media">
+						<img class="contact-me__net-icon" src="https://static.xx.fbcdn.net/rsrc.php/yD/r/d4ZIVX-5C-b.ico" alt="facebook">
+						<figcaption class="contact-me__net-name">
+							<a class="contact-me__info" href="https://www.facebook.com/wildertrujillom" target="_blank">wildertrujillom</a>
 						</figcaption>
 					</figure>
 					
@@ -151,8 +240,11 @@
 		</div>
 	</footer>
 
-	<script src="src/js/formato.js"></script>
-
+	<script src="../src/js/formato.js"></script>
+	<script src="../src/js/button-behaviors.js"></script>
+	<script>
+		blogListPetitions();
+	</script>
 <!-- Script del chatbot-->
 
 <!-- fin de Script del chatbot-->
