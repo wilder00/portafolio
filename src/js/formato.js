@@ -1,3 +1,6 @@
+//variables para uso global
+let globalData;
+let globalDataFiltered=[];
 
 //Funcion para contener las promesas que tendrá al httprequest
 const fetchData = (url_api) => {
@@ -124,43 +127,59 @@ fetchData(API)
     
 }
 
+
+
+
+
+// el formato input fr la fecha "YYYY-MM-DD" salida es [YYYY, MM-1, DD]
+let dateStringToArrayNum = dateString => {
+    return dateString.split("-").map((elem,index) =>{
+        if(index === 1) elem-=1 //los meses son considerados de 0-11
+        return parseInt(elem)
+    })
+};
+//console.log(dateStringToArrayNum("2020-12-01"));
 let dateNumberToString = date =>{
     const MONTHS = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-    return `${date.getDate()} de ${MONTHS[date.getMonth()-1]} del ${date.getFullYear()}`
+    return `${date.getDate()} de ${MONTHS[date.getMonth()]} del ${date.getFullYear()}`
 }
 
-// para extraer la parte de blogListPetitions que nos servirá para filtrar
+
+/**Operaciones con arrays */
+
+
+/* */
+
+//para colocar los checkbox con los tags para filtrar
+let setCheckboxTagsFilter = (tagsList)=>{
+    let filterTags = document.getElementById("filterTags");
+    let htmlContent;
+    //insertando tags en el filtro
+    tagsList.forEach((element,index) => {
+        htmlContent=
+        `   <div class="filter__checkbox">
+                <input type="checkbox" id="${element}" class="label__check" onclick="toFilterCheckbox(this)" value="${index}" checked>
+                <label for="${element}" class="filter__label2">${element}</label>
+            </div>
+        `;
+        filterTags.innerHTML += htmlContent;
+    });
+}
+
+// Para renderizar lo que nos servirá para filtrar
 let setCardPosts = data =>{
-
-}
-
-/** PAra obtener las publicaciones de blog */
-let blogListPetitions = ()=>{
-    const URL = "https://dl.dropboxusercontent.com/s/nf60hpb352p7bpc/postsList.json"
-
-    fetchData(URL)
-        .then(data =>{
-            let posts = data.results;
+    let posts = data.results;
             let postsContainer = document.getElementById("postsContainer");
-            let filterTags = document.getElementById("filterTags");
             let allTags = data.info.allTagsList;
             let htmlContent;
-            //insertando tags en el filtro
-            allTags.forEach((element,index) => {
-                htmlContent=
-                `   <div class="filter__checkbox">
-						<input type="checkbox" id="${element}" class="label__check" onclick="toFilterCheckbox()" value="${index}" checked>
-						<label for="${element}" class="filter__label2">${element}</label>
-					</div>
-                `;
-                filterTags.innerHTML += htmlContent;
-            });
 
             //insertando los cards de las publicaciones
             for(let post of posts){
                 let tag = post.tag.map(tagId => allTags[tagId]);
                 let tagText = tag.join(", ");
-
+                let dateAr = dateStringToArrayNum(post.postDate);
+                console.log("dateAr",dateAr);
+                console.log("date generated: ", new Date(dateAr[0], dateAr[1], dateAr[2]));
                 htmlContent =
                 `   <a class="linkcard" href="${post.url}">
 						<div class="card1">
@@ -173,7 +192,7 @@ let blogListPetitions = ()=>{
 							<div class="card1__details">
 								<div class="card1__description">
 									<p class="card1__p">
-										<small class="card1__date">Fecha: ${dateNumberToString(new Date(post.postDate))}</small>
+										<small class="card1__date">Fecha: ${dateNumberToString(new Date(dateAr[0], dateAr[1], dateAr[2]))}</small>
 										<small class="card1__tags">Tags: ${tagText} </small>
 									</p>
 									<p class="card1__p">
@@ -186,5 +205,17 @@ let blogListPetitions = ()=>{
                 `;
                 postsContainer.innerHTML += htmlContent;
             }
+}
+
+/** PAra obtener las publicaciones de blog */
+let blogListPetitions = ()=>{
+    const URL = "https://dl.dropboxusercontent.com/s/nf60hpb352p7bpc/postsList.json"
+
+    fetchData(URL)
+        .then(data =>{
+            globalData = data;
+            setCheckboxTagsFilter(data.info.allTagsList);
+            setCardPosts(data);
         })
+        .catch(err => console.log(err))
 }
