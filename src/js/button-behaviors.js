@@ -137,9 +137,13 @@ let toFilterPostDates = (objAr, stardateStr = "2020-12-01", endDateStr = "2020-1
 
 //filtrar por tope de fecha
 let toFilterDate = obj =>{
-  let dateFilter = document.getElementsByName("dateFilter")
-  let dataResum = toFilterPostDates(globalData.results, dateFilter[0].value, dateFilter[1].value)
   
+  let dateFilter = document.getElementsByName("dateFilter")//en un array los dos input de fecha
+  let dataResum = toFilterPostDates(globalData.results, dateFilter[0].value, dateFilter[1].value)
+
+  if(obj.getAttribute("id") === "startDate"){
+    dateFilter[1].setAttribute("min", obj.value)
+  }
   document.getElementById("postsContainer").innerHTML="";
   setCardPosts(dataResum, globalData.info.allTagsList);
 }
