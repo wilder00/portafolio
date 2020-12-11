@@ -90,10 +90,8 @@ let toOrderBy = obj =>{
   let dateAr;
   if(val === "newest"){
     globalData.results.sort((a,b)=>{
-      dateAr = dateStringToArrayNum(a.postDate)
-      let aDate = new Date(dateAr[0],dateAr[1],dateAr[2]);//surge problemas de precisión si pongo el string de la fecha directo
-      dateAr = dateStringToArrayNum(b.postDate)
-      let bDate = new Date(dateAr[0],dateAr[1],dateAr[2]);
+      let aDate = dateStringToNewDate(a.postDate)//surge problemas de precisión si pongo el string de la fecha directo
+      let bDate = dateStringToNewDate(b.postDate)
       if (aDate > bDate) {
         return -1;
       }
@@ -105,10 +103,8 @@ let toOrderBy = obj =>{
     });
   }else{
     globalData.results.sort((a,b)=>{
-      dateAr = dateStringToArrayNum(a.postDate)
-      let aDate = new Date(dateAr[0],dateAr[1],dateAr[2]);
-      dateAr = dateStringToArrayNum(b.postDate)
-      let bDate = new Date(dateAr[0],dateAr[1],dateAr[2]);
+      let aDate = dateStringToNewDate(a.postDate);
+      let bDate = dateStringToNewDate(b.postDate);
       if (aDate > bDate) {
         return 1;
       }
@@ -123,48 +119,32 @@ let toOrderBy = obj =>{
   setCardPosts(globalData);
 }
 
+
+let toFilterPostDates = (objAr, stardateStr = "2020-12-01", endDateStr = "2020-12-31") =>{
+  let filterStartDate = dateStringToNewDate(stardateStr);
+  let filterEndDate = dateStringToNewDate(endDateStr);
+
+  return objAr.filter((post)=> {
+    let postDate = dateStringToNewDate(post.postDate);
+
+    if(filterStartDate <= postDate && postDate <= filterEndDate){
+      return true
+    }else{
+      return false
+    }
+  });
+}
+
 //filtrar por tope de fecha
 let toFilterDate = obj =>{
-  console.log("Ingresa: ", obj.value);
-  let dateAr; //la fecha el array
-  let date; //para obtener la fecha de cada post
-  dateAr = dateStringToArrayNum(obj.value);
-  let filterDate = new Date(dateAr);
-  console.log("dateAr: ", dateAr);
-  console.log("filerDate:",filterDate);
-  console.log("ID:: ",obj.getAttribute("id"));
+  let dateFilter = document.getElementsByName("dateFilter")
+  let dataResum = toFilterPostDates(globalData.results, dateFilter[0].value, dateFilter[1].value)
   
-  if(obj.getAttribute("id") === "startDate"){
-    globalData.results = globalData.results.filter((post)=> {
-      console.log("-------------------------------------------------------------------------------------");
-      dateAr = dateStringToArrayNum(post.postDate);
-      console.log("dateAr: ", dateAr);
-      date = new Date(dateAr);
-      console.log("date: ", date);
-      console.log("if date<filterDate: ", date, " < ", filterDate, " = ", date<filterDate);
-      if(date < filterDate){
-        globalDataFiltered.push(post);
-        return false
-      }else{
-        return true
-      }
-    });
-
-  }else{
-    globalData.results = globalData.results.filter((post)=> {
-      dateAr = dateStringToArrayNum(post.postDate);
-      date = new Date(dateAr);
-      if(date > filterDate){
-        globalDataFiltered.push(post);
-        return false
-      }else{
-        return true
-      }
-    });
-  }
   document.getElementById("postsContainer").innerHTML="";
-  setCardPosts(globalData);
+  setCardPosts(dataResum, globalData.info.allTagsList);
 }
+
+
 //TO DO: 
 /**
  * Falta revisar el filtro por fhecha desde hasta, No se está filtrando bien, después la integración
