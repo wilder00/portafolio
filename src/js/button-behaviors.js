@@ -142,7 +142,9 @@ let toFilterDate = obj =>{
   let dataResum = toFilterPostDates(globalData.results, dateFilter[0].value, dateFilter[1].value)
 
   if(obj.getAttribute("id") === "startDate"){
-    dateFilter[1].setAttribute("min", obj.value)
+    dateFilter[1].setAttribute("min", obj.value);
+  }else{
+    dateFilter[0].setAttribute("max", obj.value);
   }
   document.getElementById("postsContainer").innerHTML="";
   setCardPosts(dataResum, globalData.info.allTagsList);
