@@ -41,7 +41,7 @@ let toChangeViewCard = (ob)=>{
 }
 
 
-//to see filters
+//to see filters | ver las opciones de filtro
 let toSeeFilters = ()=>{
   if(!isFilterBoxVisible){
     document.getElementById("filterBox").style.height = '240px';
@@ -54,36 +54,29 @@ let toSeeFilters = ()=>{
   }
 }
 
-//filter with checkbox
-let toFilterCheckbox = (obj)=>{
-  let val = parseInt(obj.getAttribute("value"));
-  if(!obj.checked){
-    //dejamos en global data solo lo que no coincida y los que conincida lo pasamos a los filtrados
-    globalData.results = globalData.results.filter((post)=> {
-      if(post.tag.includes(val)){
-        globalDataFiltered.push(post)
-        return false
-      }else{
-        return true
-      }
-    });
-  }else{
-    let stayFiltered=[];
-    let goBackData = globalDataFiltered.filter(post => {
-      if(post.tag.includes(val)){
-        return true
-      }else{
-        stayFiltered.push(obj)
-        return false
-      }
-    });
-    globalDataFiltered = stayFiltered;
-    globalData.results = globalData.results.concat(goBackData);
-  }
-  document.getElementById("postsContainer").innerHTML="";
-  setCardPosts(globalData.results);
+
+let toFilterCheckboxAr = (objAr = []) =>{
+  console.log(document.getElementsByName("checkboxTags"));
+  let checkboxTags = [...document.getElementsByName("checkboxTags")].filter(input => input.checked);
+  return objAr.filter( post => {
+    for (const checkbox of checkboxTags) {
+      if(post.tag.includes(parseInt(checkbox.value)))
+        return true; //se prioriza los tags checked antes que los no checked
+    }
+    return false;
+  });
 }
 
+//filter with checkbox
+let toFilterCheckbox = (obj)=>{
+  
+  let results = toFilterCheckboxAr(globalData.results);
+    
+  document.getElementById("postsContainer").innerHTML="";
+  setCardPosts(results);
+}
+
+//Ordenar por mas reciente o más viejo
 let toOrderPost = (objAr = [], orderByNewest = true) =>{
   objAr.sort((a,b)=>{
     let aDate = dateStringToNewDate(a.postDate)//surge problemas de precisión si pongo el string de la fecha directo
@@ -99,7 +92,7 @@ let toOrderPost = (objAr = [], orderByNewest = true) =>{
   });
 }
 
-//Ordenar por mas reciente o más viejo
+//capturar la accion de ordenar
 let toOrderBy = obj =>{
   toOrderPost(globalData.results, obj.value === "newest");
   
