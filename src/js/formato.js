@@ -182,7 +182,7 @@ let setDateFilterRange = (startDateStr, endDateStr)=>{
 }
 
 // Para renderizar lo que nos servirá para filtrar
-let setCardPosts = (posts=[], allTags=[]) =>{
+let setCardPosts = (posts=[], allTags=globalData.info.allTagsList) =>{
     let postsContainer = document.getElementById("postsContainer");
     let htmlContent;
     //insertando los cards de las publicaciones

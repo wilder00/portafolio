@@ -81,42 +81,30 @@ let toFilterCheckbox = (obj)=>{
     globalData.results = globalData.results.concat(goBackData);
   }
   document.getElementById("postsContainer").innerHTML="";
-  setCardPosts(globalData);
+  setCardPosts(globalData.results);
+}
+
+let toOrderPost = (objAr = [], orderByNewest = true) =>{
+  objAr.sort((a,b)=>{
+    let aDate = dateStringToNewDate(a.postDate)//surge problemas de precisión si pongo el string de la fecha directo
+    let bDate = dateStringToNewDate(b.postDate)
+    if (aDate < bDate) {
+      return orderByNewest? 1 : -1;
+    }
+    if (aDate > bDate) {
+      return orderByNewest? -1 : 1;
+    }
+    // a must be equal to b
+    return 0;
+  });
 }
 
 //Ordenar por mas reciente o más viejo
 let toOrderBy = obj =>{
-  let val = obj.value;
-  let dateAr;
-  if(val === "newest"){
-    globalData.results.sort((a,b)=>{
-      let aDate = dateStringToNewDate(a.postDate)//surge problemas de precisión si pongo el string de la fecha directo
-      let bDate = dateStringToNewDate(b.postDate)
-      if (aDate > bDate) {
-        return -1;
-      }
-      if (aDate < bDate) {
-        return 1;
-      }
-      // a must be equal to b
-      return 0;
-    });
-  }else{
-    globalData.results.sort((a,b)=>{
-      let aDate = dateStringToNewDate(a.postDate);
-      let bDate = dateStringToNewDate(b.postDate);
-      if (aDate > bDate) {
-        return 1;
-      }
-      if (aDate < bDate) {
-        return -1;
-      }
-      // a must be equal to b
-      return 0;
-    })
-  }
+  toOrderPost(globalData.results, obj.value === "newest");
+  
   document.getElementById("postsContainer").innerHTML="";
-  setCardPosts(globalData);
+  setCardPosts(globalData.results);
 }
 
 
@@ -140,6 +128,8 @@ let toFilterDate = obj =>{
   
   let dateFilter = document.getElementsByName("dateFilter")//en un array los dos input de fecha
   let dataResum = toFilterPostDates(globalData.results, dateFilter[0].value, dateFilter[1].value)
+
+  if(obj.value == "") return -1; // si el cambio es una fecha vacía, se evita que se actualice con nada
 
   if(obj.getAttribute("id") === "startDate"){
     dateFilter[1].setAttribute("min", obj.value);
