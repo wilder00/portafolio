@@ -113,12 +113,12 @@
 						<div class="filter__group1">
 							<div class="filter__element">
 								<label for="startDate" class="filter__label">Desde:</label>
-								<input class="filter__input" id="startDate" type="date" onchange="toFilterDate(this)" min="2020-12-01">
+								<input class="filter__input" id="startDate" name="dateFilter" type="date" onchange="toFilterDate(this)" min="2020-12-01">
 							</div>
 	
 							<div class="filter__element">
 								<label for="endDate" class="filter__label">hasta:</label>
-								<input class="filter__input" id="endDate" type="date" onchange="toFilterDate(this)" min="2020-12-01">
+								<input class="filter__input" id="endDate" name="dateFilter" type="date" onchange="toFilterDate(this)" min="2020-12-01">
 							</div>
 
 							<div class="filter__element">
@@ -138,7 +138,7 @@
 
 									<!-- Aquí los  checkbox para filtrar con el siguiente formato:
 									<div class="filter__checkbox">
-										<input type="checkbox" class="label__check" name="id1" value="value1">
+										<input type="checkbox" class="label__check" name="checkboxTags" value="value1">
 										<label for="id1" class="filter__label2">This is issssssd 1 </label>
 									</div>
 									-->

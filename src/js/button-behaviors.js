@@ -41,7 +41,7 @@ let toChangeViewCard = (ob)=>{
 }
 
 
-//to see filters
+//to see filters | ver las opciones de filtro
 let toSeeFilters = ()=>{
   if(!isFilterBoxVisible){
     document.getElementById("filterBox").style.height = '240px';
@@ -54,117 +54,90 @@ let toSeeFilters = ()=>{
   }
 }
 
+
+let toFilterCheckboxAr = (objAr = []) =>{
+  let checkboxTags = [...document.getElementsByName("checkboxTags")].filter(input => input.checked);
+  
+  return objAr.filter( post => {
+    for (const checkbox of checkboxTags) {
+      if(post.tag.includes(parseInt(checkbox.value)))
+        return true; //se prioriza los tags checked antes que los no checked
+    }
+    return false;
+  });
+}
+
 //filter with checkbox
 let toFilterCheckbox = (obj)=>{
-  let val = parseInt(obj.getAttribute("value"));
-  if(!obj.checked){
-    //dejamos en global data solo lo que no coincida y los que conincida lo pasamos a los filtrados
-    globalData.results = globalData.results.filter((post)=> {
-      if(post.tag.includes(val)){
-        globalDataFiltered.push(post)
-        return false
-      }else{
-        return true
-      }
-    });
-  }else{
-    let stayFiltered=[];
-    let goBackData = globalDataFiltered.filter(post => {
-      if(post.tag.includes(val)){
-        return true
-      }else{
-        stayFiltered.push(obj)
-        return false
-      }
-    });
-    globalDataFiltered = stayFiltered;
-    globalData.results = globalData.results.concat(goBackData);
-  }
+  
+  let results = toFilterCheckboxAr(globalData.results);
+  
+  results = toFilterPostDates(results, document.getElementsByName("dateFilter"));
+
   document.getElementById("postsContainer").innerHTML="";
-  setCardPosts(globalData);
+  setCardPosts(results);
 }
 
 //Ordenar por mas reciente o más viejo
+let toOrderPost = (objAr = [], orderByNewest = true) =>{
+  objAr.sort((a,b)=>{
+    let aDate = dateStringToNewDate(a.postDate)//surge problemas de precisión si pongo el string de la fecha directo
+    let bDate = dateStringToNewDate(b.postDate)
+    if (aDate < bDate) {
+      return orderByNewest? 1 : -1;
+    }
+    if (aDate > bDate) {
+      return orderByNewest? -1 : 1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+}
+
+//capturar la accion de ordenar
 let toOrderBy = obj =>{
-  let val = obj.value;
-  let dateAr;
-  if(val === "newest"){
-    globalData.results.sort((a,b)=>{
-      dateAr = dateStringToArrayNum(a.postDate)
-      let aDate = new Date(dateAr[0],dateAr[1],dateAr[2]);//surge problemas de precisión si pongo el string de la fecha directo
-      dateAr = dateStringToArrayNum(b.postDate)
-      let bDate = new Date(dateAr[0],dateAr[1],dateAr[2]);
-      if (aDate > bDate) {
-        return -1;
-      }
-      if (aDate < bDate) {
-        return 1;
-      }
-      // a must be equal to b
-      return 0;
-    });
-  }else{
-    globalData.results.sort((a,b)=>{
-      dateAr = dateStringToArrayNum(a.postDate)
-      let aDate = new Date(dateAr[0],dateAr[1],dateAr[2]);
-      dateAr = dateStringToArrayNum(b.postDate)
-      let bDate = new Date(dateAr[0],dateAr[1],dateAr[2]);
-      if (aDate > bDate) {
-        return 1;
-      }
-      if (aDate < bDate) {
-        return -1;
-      }
-      // a must be equal to b
-      return 0;
-    })
-  }
+  toOrderPost(globalData.results, obj.value === "newest");
+  
+  let postFiltered = toFilterPostDates(globalData.results, document.getElementsByName("dateFilter"));
+  postFiltered = toFilterCheckboxAr(postFiltered);
+
   document.getElementById("postsContainer").innerHTML="";
-  setCardPosts(globalData);
+  setCardPosts(postFiltered);
+}
+
+
+let toFilterPostDates = (objAr, dateFilterAr) =>{
+  let filterStartDate = dateStringToNewDate(dateFilterAr[0].value);
+  let filterEndDate = dateStringToNewDate(dateFilterAr[1].value);
+
+  return objAr.filter((post)=> {
+    let postDate = dateStringToNewDate(post.postDate);
+
+    if(filterStartDate <= postDate && postDate <= filterEndDate){
+      return true
+    }else{
+      return false
+    }
+  });
 }
 
 //filtrar por tope de fecha
 let toFilterDate = obj =>{
-  console.log("Ingresa: ", obj.value);
-  let dateAr; //la fecha el array
-  let date; //para obtener la fecha de cada post
-  dateAr = dateStringToArrayNum(obj.value);
-  let filterDate = new Date(dateAr);
-  console.log("dateAr: ", dateAr);
-  console.log("filerDate:",filterDate);
-  console.log("ID:: ",obj.getAttribute("id"));
-  
-  if(obj.getAttribute("id") === "startDate"){
-    globalData.results = globalData.results.filter((post)=> {
-      console.log("-------------------------------------------------------------------------------------");
-      dateAr = dateStringToArrayNum(post.postDate);
-      console.log("dateAr: ", dateAr);
-      date = new Date(dateAr);
-      console.log("date: ", date);
-      console.log("if date<filterDate: ", date, " < ", filterDate, " = ", date<filterDate);
-      if(date < filterDate){
-        globalDataFiltered.push(post);
-        return false
-      }else{
-        return true
-      }
-    });
+  if(obj.value == "") return -1; // si el cambio es una fecha vacía, se evita que se actualice con nada
+  let dateFilter = document.getElementsByName("dateFilter")//en un array los dos input de fecha
+  let dataResum = toFilterPostDates(globalData.results, dateFilter);
 
+  if(obj.getAttribute("id") === "startDate"){
+    dateFilter[1].setAttribute("min", obj.value);
   }else{
-    globalData.results = globalData.results.filter((post)=> {
-      dateAr = dateStringToArrayNum(post.postDate);
-      date = new Date(dateAr);
-      if(date > filterDate){
-        globalDataFiltered.push(post);
-        return false
-      }else{
-        return true
-      }
-    });
+    dateFilter[0].setAttribute("max", obj.value);
   }
   document.getElementById("postsContainer").innerHTML="";
-  setCardPosts(globalData);
+  setCardPosts(dataResum, globalData.info.allTagsList);
+
 }
+
+
 //TO DO: 
 /**
  * Falta revisar el filtro por fhecha desde hasta, No se está filtrando bien, después la integración
