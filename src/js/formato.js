@@ -224,6 +224,7 @@ let blogListPetitions = ()=>{
     fetchData(URL)
         .then(data =>{
             globalData = data;
+            toOrderPost(globalData.results);
             setCheckboxTagsFilter(data.info.allTagsList);
             setDateFilterRange(data.info.firstPublicationDate, data.info.lastPublicationDate)
             setCardPosts(data.results, data.info.allTagsList);

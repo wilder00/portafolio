@@ -57,6 +57,7 @@ let toSeeFilters = ()=>{
 
 let toFilterCheckboxAr = (objAr = []) =>{
   let checkboxTags = [...document.getElementsByName("checkboxTags")].filter(input => input.checked);
+  
   return objAr.filter( post => {
     for (const checkbox of checkboxTags) {
       if(post.tag.includes(parseInt(checkbox.value)))
@@ -70,7 +71,9 @@ let toFilterCheckboxAr = (objAr = []) =>{
 let toFilterCheckbox = (obj)=>{
   
   let results = toFilterCheckboxAr(globalData.results);
-    
+  
+  results = toFilterPostDates(results, document.getElementsByName("dateFilter"));
+
   document.getElementById("postsContainer").innerHTML="";
   setCardPosts(results);
 }
@@ -95,14 +98,17 @@ let toOrderPost = (objAr = [], orderByNewest = true) =>{
 let toOrderBy = obj =>{
   toOrderPost(globalData.results, obj.value === "newest");
   
+  let postFiltered = toFilterPostDates(globalData.results, document.getElementsByName("dateFilter"));
+  postFiltered = toFilterCheckboxAr(postFiltered);
+
   document.getElementById("postsContainer").innerHTML="";
-  setCardPosts(globalData.results);
+  setCardPosts(postFiltered);
 }
 
 
-let toFilterPostDates = (objAr, stardateStr = "2020-12-01", endDateStr = "2020-12-31") =>{
-  let filterStartDate = dateStringToNewDate(stardateStr);
-  let filterEndDate = dateStringToNewDate(endDateStr);
+let toFilterPostDates = (objAr, dateFilterAr) =>{
+  let filterStartDate = dateStringToNewDate(dateFilterAr[0].value);
+  let filterEndDate = dateStringToNewDate(dateFilterAr[1].value);
 
   return objAr.filter((post)=> {
     let postDate = dateStringToNewDate(post.postDate);
@@ -117,11 +123,9 @@ let toFilterPostDates = (objAr, stardateStr = "2020-12-01", endDateStr = "2020-1
 
 //filtrar por tope de fecha
 let toFilterDate = obj =>{
-  
-  let dateFilter = document.getElementsByName("dateFilter")//en un array los dos input de fecha
-  let dataResum = toFilterPostDates(globalData.results, dateFilter[0].value, dateFilter[1].value)
-
   if(obj.value == "") return -1; // si el cambio es una fecha vacía, se evita que se actualice con nada
+  let dateFilter = document.getElementsByName("dateFilter")//en un array los dos input de fecha
+  let dataResum = toFilterPostDates(globalData.results, dateFilter);
 
   if(obj.getAttribute("id") === "startDate"){
     dateFilter[1].setAttribute("min", obj.value);
@@ -130,6 +134,7 @@ let toFilterDate = obj =>{
   }
   document.getElementById("postsContainer").innerHTML="";
   setCardPosts(dataResum, globalData.info.allTagsList);
+
 }
 
 
