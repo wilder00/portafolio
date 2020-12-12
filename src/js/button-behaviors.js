@@ -56,7 +56,6 @@ let toSeeFilters = ()=>{
 
 
 let toFilterCheckboxAr = (objAr = []) =>{
-  console.log(document.getElementsByName("checkboxTags"));
   let checkboxTags = [...document.getElementsByName("checkboxTags")].filter(input => input.checked);
   return objAr.filter( post => {
     for (const checkbox of checkboxTags) {
