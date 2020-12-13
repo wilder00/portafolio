@@ -84,6 +84,9 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 	<!--Fin de script de comentario para facebook-->
+	<!-- Script de js de Linkedin-->
+	<script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: es_LA</script>
+	<!--Fin de script de comentario para facebook-->
 	
 	<nav class="nav">
 		<figure class="nav__figure">
@@ -180,27 +183,47 @@
                     </p>
 
                     <div class="page__details">
+						<div class="page__date"><small class="page__small-date">3 de diciembre del 2020</small></div>
                         <div class="page__tags"><small class="page__small">Starting, thinking, debug</small></div>
-                    </div>
-					<div class="space"></div>
-					<div class="face-save" style="margin: 5px 0;">
-						<div class="fb-save" data-uri="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html" data-size="large"></div>
 					</div>
-					<div class="likes">
-						<div class="fb-like" data-href="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
-						
-						<!-- Share on linkedin-->
-						<script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: es_LA</script>
-						<script type="IN/Share" data-url="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html"></script>
-						<!-- End Share on linkedin-->
+					<div class="space"></div>
+
+					<div class="back-next-pages">
+						<div class="back-next-page">
+							<small class="back-next-pages__changer">&lt;&lt;</small><a class="back-next-pages__link" href="http://"> La anterior página: ¿Cuanto se necesita para entender que necesitamos compartir lo poco que sabemos?</a>
+						</div>
+						<div class="back-next-page">
+							<a class="back-next-pages__link" href="http://"> La siguiente página: ¿Cuanto se? </a><small class="back-next-pages__changer"> &gt;&gt;</small>
+						</div>
 					</div>
 
-				    <div class="comments">
-                        <div class="fb-comments" onclick="FB.AppEvents.logEvent('comments_clicked')" data-href="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html" data-numposts="20" data-width="100%"></div>
+					<div class="social-area">
+						<div class="face-save" style="margin: 5px 0;">
+							<div class="fb-save" data-uri="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html" data-size="small"></div>
+						</div>
+
+						<div class="likes">
+							<div class="fb-like" data-href="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+							
+							<!-- Share on linkedin-->
+							<div class="linkedin-share">
+								
+								<script type="IN/Share" data-url="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html"></script>
+							</div>
+							<!-- End Share on linkedin-->
+						</div>
+	
+						<div class="comments">
+							<h5 class="social__titles"> Dejanos tu comentario: </h5>
+							<div class="fb-comments" onclick="FB.AppEvents.logEvent('comments_clicked')" data-href="https://www.wildertrujillo.com/blog/2020/diciembre/3-primera_pagina_blog.html" data-numposts="20" data-width="100%"></div>
+						</div>
+						
+						<div class="face-pages">
+							<h5 class="social__titles">Puedes seguirme: </h5>
+							<div class="fb-page" data-href="https://www.facebook.com/wildertrujillom" data-tabs="timeline" data-width="500" data-height="70" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/wildertrujillom" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/wildertrujillom">Wilder Trujillo</a></blockquote></div>
+						</div>
 					</div>
-					<div class="face-pages">
-						<div class="fb-page" data-href="https://www.facebook.com/wildertrujillom" data-tabs="timeline" data-width="500" data-height="70" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/wildertrujillom" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/wildertrujillom">Wilder Trujillo</a></blockquote></div>
-					</div>
+
                 </div>
             </div>
         </article>
@@ -213,6 +236,7 @@
 		<div class="container">
 			<article class="contact-me__area">
 				<div class="contact-me__social-media-list">
+
 					<figure  class="contact-me__social-media">
 						<img class="contact-me__net-icon" src="https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon5.ico" alt="gmail">
 						<figcaption class="contact-me__net-name">
