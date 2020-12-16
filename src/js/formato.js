@@ -1,7 +1,7 @@
 //variables para uso global
 let globalData;
 let globalDataFiltered=[];
-
+let loadingDiv = `<div class="lds-dual-ring"></div>`;
 //Funcion para contener las promesas que tendrá al httprequest
 const fetchData = (url_api) => {
     return new Promise((resolve, reject) => {
@@ -52,8 +52,10 @@ fetchData(API)
         let portfolio = document.getElementById('portfolio-container')
         let htmlContent = "";
         
+        portfolio.innerHTML = loadingDiv;
+
         for (let project of projects) {
-            let htmlContent = `
+            htmlContent += `
             <article class="project">
                 <div class="project__details">
                     <h3 class="project__name"> ${project.name} </h3>
@@ -80,15 +82,16 @@ fetchData(API)
                 
             </article>`
             //console.log(portfolio.innerHTML);
-            portfolio.innerHTML += htmlContent;
-
         }
+        portfolio.innerHTML = htmlContent;
 
         /******* Rellenando parte de  estudios*/
         let studies = data.studies;
         let studiesContainer = document.getElementById('studiesContainer');
+        //studiesContainer.innerHTML = ``
+        htmlContent="";
         for (let study of studies) {
-            htmlContent = `
+            htmlContent += `
                 <div class="card1">
                     <figure class="card1__figure">
                         <figcaption class="card1__figcaption">
@@ -116,9 +119,9 @@ fetchData(API)
                 </div>`
                 
             //console.log(portfolio.innerHTML);
-            studiesContainer.innerHTML += htmlContent;
-
+            
         }
+        studiesContainer.innerHTML = htmlContent;
         
 
     })
@@ -154,17 +157,17 @@ let dateNumberToString = date =>{
 //para colocar los checkbox con los tags para filtrar
 let setCheckboxTagsFilter = (tagsList)=>{
     let filterTags = document.getElementById("filterTags");
-    let htmlContent;
+    let htmlContent="";
     //insertando tags en el filtro
     tagsList.forEach((element,index) => {
-        htmlContent=
+        htmlContent+=
         `   <div class="filter__checkbox">
                 <input type="checkbox" id="${element}" class="label__check" name="checkboxTags" onclick="toFilterCheckbox(this)" value="${index}" checked>
                 <label for="${element}" class="filter__label2">${element}</label>
             </div>
         `;
-        filterTags.innerHTML += htmlContent;
     });
+    filterTags.innerHTML = htmlContent;
 }
 
 //startDate and endDate : strting
@@ -184,13 +187,13 @@ let setDateFilterRange = (startDateStr, endDateStr)=>{
 // Para renderizar lo que nos servirá para filtrar
 let setCardPosts = (posts=[], allTags=globalData.info.allTagsList) =>{
     let postsContainer = document.getElementById("postsContainer");
-    let htmlContent;
+    let htmlContent="";
     //insertando los cards de las publicaciones
     for(let post of posts){
         let tag = post.tag.map(tagId => allTags[tagId]);
         let tagText = tag.join(", ");
         let newDate = dateStringToNewDate(post.postDate);
-        htmlContent =
+        htmlContent +=
         `   <a class="linkcard" href="${post.url}">
                 <div class="card1">
                     <figure class="card1__figure">
@@ -213,8 +216,8 @@ let setCardPosts = (posts=[], allTags=globalData.info.allTagsList) =>{
                 </div>
             </a>
         `;
-        postsContainer.innerHTML += htmlContent;
     }
+    postsContainer.innerHTML = htmlContent;
 }
 
 /** PAra obtener las publicaciones de blog */

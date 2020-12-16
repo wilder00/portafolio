@@ -113,12 +113,12 @@
 						<div class="filter__group1">
 							<div class="filter__element">
 								<label for="startDate" class="filter__label">Desde:</label>
-								<input class="filter__input" id="startDate" name="dateFilter" type="date" onchange="toFilterDate(this)" min="2020-12-01">
+								<input class="filter__input" id="startDate" name="dateFilter" type="date" onchange="toFilterDate(this)" min="2020-12-01" required>
 							</div>
 	
 							<div class="filter__element">
 								<label for="endDate" class="filter__label">hasta:</label>
-								<input class="filter__input" id="endDate" name="dateFilter" type="date" onchange="toFilterDate(this)" min="2020-12-01">
+								<input class="filter__input" id="endDate" name="dateFilter" type="date" onchange="toFilterDate(this)" min="2020-12-01" required>
 							</div>
 
 							<div class="filter__element">
@@ -142,7 +142,7 @@
 										<label for="id1" class="filter__label2">This is issssssd 1 </label>
 									</div>
 									-->
-
+									<div class="lds-dual-ring"></div>
 	
 								</div>
 							</div>
@@ -153,6 +153,7 @@
 
 				<div id="postsContainer" class="posts__container">
 					<!--Aqui entra los cards de post -->
+					<div class="lds-dual-ring"></div>
 					<!--
 						// Simulate a mouse click:
 						window.location.href = "http://www.w3schools.com";
@@ -234,7 +235,7 @@
 		<div class="container">
 			<div class="footer__area">
 				<p class="footer__p">
-					Este es el final de mi web, agradezco mucho lo hayan leido.
+					Este es el final de mi sitio web, agradezco mucho que lo hayan leido.
 				</p>
 			</div>
 		</div>

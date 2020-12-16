@@ -64,14 +64,15 @@
 .back-next-page{
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    /*width: 40%;*/
+    max-width: 40%;
 }
 .back-next-pages__changer{
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
     color: #3c72ef83;
     transform: scaley(5);
-    margin: auto 0;
+    margin: auto 10px;
 }
 .back-next-pages__link{
     display: inline-block;

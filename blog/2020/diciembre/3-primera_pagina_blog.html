@@ -36,8 +36,7 @@
 
 	<title>¿Cuanto se necesita para entender que necesitamos compartir lo poco que sabemos? | Wilder Trujillo</title>
 	<link rel="stylesheet" href="../../../src/css/style.css">
-	
-    <!--link rel="stylesheet" href="../../../src/css/blog_list_style.css"-->
+	<link rel="stylesheet" href="../../../src/css/buttons_style.css">
     <link rel="stylesheet" href="../../../src/css/blog_style.css">
 	<link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.png" type="image/png">
 	
@@ -118,6 +117,17 @@
 
 	</header>
 
+	<!-- boton para subir -->
+	<div id="go-up-button" class="go-up-button--right-buttom button--scale-0" onclick="topFunction()">
+    
+		<div  class="go-up-button button--black1 ">
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+		</div>
+		
+	</div>
 
 	<section id="studies" class="studies">
 		<article class="container">
@@ -190,7 +200,7 @@
 
 					<div class="back-next-pages">
 						<div class="back-next-page">
-							<small class="back-next-pages__changer">&lt;&lt;</small><a class="back-next-pages__link" href="http://"> La anterior página: ¿Cuanto se necesita para entender que necesitamos compartir lo poco que sabemos?</a>
+							<small class="back-next-pages__changer"><!--&lt;&lt;--></small><a class="back-next-pages__link" href="http://"><!-- La anterior página: ¿Cuanto se necesita para entender que necesitamos compartir lo poco que sabemos? --></a>
 						</div>
 						<div class="back-next-page">
 							<a class="back-next-pages__link" href="http://"> La siguiente página: ¿Cuanto se? </a><small class="back-next-pages__changer"> &gt;&gt;</small>
@@ -258,6 +268,13 @@
 						</figcaption>
 					</figure>
 					
+					<figure  class="contact-me__social-media">
+						<img class="contact-me__net-icon" src="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" alt="instagram">
+						<figcaption class="contact-me__net-name">
+							<a class="contact-me__info" href="https://www.instagram.com/wilder_trujillo" target="_blank">wilder_trujillo</a>
+						</figcaption>
+					</figure>
+				
 				</div>
 			</article>
 		</div>
@@ -269,13 +286,14 @@
 		<div class="container">
 			<div class="footer__area">
 				<p class="footer__p">
-					Este es el final de mi web, agradezco mucho lo hayan leido.
+					Este es el final de mi sitio web, agradezco mucho que lo hayan leido.
 				</p>
 			</div>
 		</div>
 	</footer>
 
-	<script src="src/js/formato.js"></script>
+	<script src="../../../src/js/button-behaviors.js"></script>
+	
 	
 </body>
 </html>

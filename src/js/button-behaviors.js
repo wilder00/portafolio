@@ -126,7 +126,8 @@ let toFilterDate = obj =>{
   if(obj.value == "") return -1; // si el cambio es una fecha vacía, se evita que se actualice con nada
   let dateFilter = document.getElementsByName("dateFilter")//en un array los dos input de fecha
   let dataResum = toFilterPostDates(globalData.results, dateFilter);
-
+  dataResum = toFilterCheckboxAr(dataResum);
+  
   if(obj.getAttribute("id") === "startDate"){
     dateFilter[1].setAttribute("min", obj.value);
   }else{
