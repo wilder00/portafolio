@@ -27,7 +27,7 @@ let toChangeViewCard = (ob)=>{
   let styleTypeCardSelected ="view-type--option view-type--selected";
 
   
-  //view-type--option
+  //view-type--option //para cambiar de vista de los post de bloque a vista de lista 
   if(id === "cardBlockView"){
     document.getElementById("cardListView").setAttribute("class", styleTypeCard);
     ob.setAttribute("class", styleTypeCardSelected);

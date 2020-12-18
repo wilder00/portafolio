@@ -134,3 +134,17 @@
     color: white;
 }
 
+
+/******* media queries *****/
+@media screen and (max-width: 480px){
+    .go-up-button--right-buttom{
+        opacity: 0.3;
+        right: 1vw;
+        bottom: 0.5vw;
+    }
+}
+@media screen and (max-width: 320px){
+    .go-up-button--right-buttom{
+        opacity: 0.15;
+    }
+}

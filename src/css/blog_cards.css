@@ -1,6 +1,6 @@
 .postsContainer{
     display: flex;
-
+    width: 100%;
 }
 
 .card1{
@@ -14,16 +14,19 @@
     width: 10%;
     overflow: visible;
 }
+.card1__figcaption{
+    width: 100%;
+}
 .card1__h5{
     color: #9e6c0e;
     text-shadow: none;
     font-weight: bold;
     
-    font-size: 17px;
-    width: 1000px;
+    font-size: 0.9em;
+    width: 830px;
     position: relative;
-    left: 500px;
-    top: -40px;
+    left: 10vw;
+    top: -42px;
     border: none;
 }
 .card1__img{
@@ -34,20 +37,106 @@
 
 .card1__details{
     display: flex;
-    flex-flow: row;
-    align-items: center;
+    flex-flow: column;
+    justify-content: flex-end;
     height: 100%;
     width: 100%;
 }
 .card1__description{
-    height: 25px;
+    height: 70%;
+    
 }
 .card1__date{
     color: #005eff;
+    display: inline;
     margin-right: 20px;
 }
 .card1__p{
     margin: 2px;
-    font-size: 14px;
+    font-size: 1.1em;
     color: black;
+}
+
+
+
+
+/************ media queries *********/
+
+@media screen and (max-width: 1023px){
+    .card1{
+        height: 125px;
+    }
+    .card1__h5{
+        /* font-size: 17px; */
+        width: 70vw;
+        /* left: 23vw; */
+        left: 12vw;
+        top: -37px;
+        font-size: 0.81em;
+    }
+    .card1__description{
+        height: 65%;
+    }
+    .card1__p{
+        font-size: 1em;
+    }
+}
+
+/* @media screen and (max-width: 768px){ */
+@media screen and (max-width: 767px){
+    .card1{
+        height: 80px;
+        font-size: 14px;
+    }
+    .card1__h5{
+        top: -45px;
+        left: 13vw;
+    }
+    .card1__description{
+        height: auto;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .card1__date{
+     
+    }
+    .card1__tags{
+        
+    }
+    .card1__description .card1__p:first-child{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        align-self: flex-end;
+    }
+    .card1__description .card1__p:last-child{
+        display: none; 
+    }
+}
+
+
+/* @media screen and (max-width: 480px){} */
+@media screen and (max-width: 480px){
+    
+    .card1{
+        width: 95vw;
+    }
+    .card1__h5{
+        width: 80vw;
+        /* top: -45px; */
+        left: 10vw;
+        font-size: 0.70em;
+    }
+    .card1__description{
+        margin-bottom: 0;
+    }
+    /* .card1__description .card1__p:first-child{
+        background-color: lawngreen;
+    } */
+    
+}
+
+/* @media screen and (max-width: 320px){} */
+@media screen and (max-width: 320px){
+    
 }
