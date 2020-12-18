@@ -32,7 +32,8 @@
 	<!-- end: Metatag para buscadores o bots-->
 
 	<!-- start: Metatag parte responsive-->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<!-- end: Metatag parte del responsive-->
 
 	<title>Wilder Trujillo</title>
@@ -54,28 +55,9 @@
 
 <body>
 	<!-- start: JS SDK facebook-->
-	<script>
-		window.fbAsyncInit = function() {
-		FB.init({
-			appId      : '1855828554564238',
-			cookie     : true,
-			xfbml      : true,
-			version    : 'v9.0'
-		});
-			
-		FB.AppEvents.logPageView();   
-			
-		};
-	
-		(function(d, s, id){
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) {return;}
-		js = d.createElement(s); js.id = id;
-		js.src = "https://connect.facebook.net/es_LA/sdk.js";
-		fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
-	<!-- end: de script de comentario para facebook-->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v9.0&appId=1855828554564238&autoLogAppEvents=1" nonce="ed6opbm6"></script>
+	<!-- end: de script de comentario para facebook -->
 
 	<nav class="nav">
 		<figure class="nav__figure">
@@ -136,9 +118,39 @@
 				</p>
 				<div id="portfolio-container" class="prortfolio_container">
 					<!-- A quí se completa con Javascript los proyectos-->
+					
 					<div style="margin-left: 45%;">
 						<div class="lds-dual-ring" ></div>
 					</div>
+					
+					<!-- quitar de aquí --><!-- 
+					<article class="project">
+						<div class="project__details">
+							<h3 class="project__name"> Reproductor Multimedia </h3>
+							<p class="project__info">
+								<small class="project__date">Fecha: <span project__exact-date="">02/02/2020</span></small>
+							</p>
+		
+							<p class="project__description">
+								私は　ウイルデル　です。ペルー人　です。
+							</p>
+							<p class="project__ubication">
+								<a class="project__link" href="http://facebook.com"> Ver aquí &gt;&gt;</a>
+							</p>
+						</div>
+		
+						<div class="project__photo">
+							<figure class="project__figure">
+								<img class="project__img" src="https://dl.dropboxusercontent.com/s/oojh67sca2cmiz4/image_template.png" alt="imagen del proyecto">
+								<figcaption class="project__figcaption">
+								Desarrollado con html, css y javaScript simple
+								</figcaption>
+							</figure>
+						</div>
+						
+					</article> -->
+					<!-- termino para quitar -->
+					
 				</div>
 			</div>
 
@@ -180,11 +192,40 @@
 					En esta sección muestro en dónde estoy estudiando y alguno de los cursos que he tomado
 					de forma externa a la universidad.
 				</p>
+			</div>
 				<div id="studiesContainer" class="studies__container">
 					<!--Aqui entra los cards de estudies -->
 					<div class="lds-dual-ring"></div>
+
+					<!-- Para eliminar modelo -->
+					<!-- <div class="card1">
+						<figure class="card1__figure">
+							<figcaption class="card1__figcaption">
+								<h5 class="card1__h5"> USIL </h5>
+							</figcaption>
+							<img class="card1__img" src="https://dl.dropboxusercontent.com/s/oojh67sca2cmiz4/image_template.png" alt="imagen relacionada a mis estudios">
+						</figure>
+						<div class="card1__details">
+							<h4 class="card1__title">
+								Ingeniería informática y de Sistemas
+							</h4>
+							<div class="card1__description">
+								<p class="card1__p">
+									<small class="card1__date">Fecha Inicio: 2017</small>
+								</p>
+								<p class="card1__p">
+									<small class="card1__date">Fecha Finalizado: Continuando</small>
+								</p>
+								<p class="card1__p">
+									Actualmente estoy estuadiando es la usil
+								</p>
+	
+							</div>
+						</div>
+					</div> -->
+					<!-- Fin para eliminar modelo -->
+
 				</div>
-			</div>
 		</div>
 	</section>
 
