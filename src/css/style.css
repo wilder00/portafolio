@@ -1,19 +1,4 @@
-/*@font-face {
-    font-family: Kanit;
-    src: url('../fonts/Kanit-Light.ttf');
-}
-*/
-
 /*
-fonts{
-    font-family: 'Oxanium', sans-serif;
-    font-family: 'Darker Grotesque', sans-serif;
-    font-family: 'Exo 2', sans-serif;
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Work Sans', sans-serif;
-}
 los utilizados{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Work Sans', sans-serif;
@@ -265,6 +250,7 @@ h5{
     background-image: url(https://dl.dropboxusercontent.com/s/9hwnlx3cdu5v79z/lineas_de_puntos.svg);
     background-size: cover;
     background-position: right 0px bottom 0px;
+    /* background-position: right 0px top -10px; */
     background-repeat: no-repeat;
     width: 50%;
     /* min-width: 275px;

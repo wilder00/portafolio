@@ -67,7 +67,7 @@ fetchData(API)
                         ${project.description}
                     </p>
                     <p class="project__ubication">
-                        <a class="project__link" href="${project.url}"> Ver aquí >></a>
+                        <a class="project__link" href="${project.url}"> Ver más >></a>
                     </p>
                 </div>
 
