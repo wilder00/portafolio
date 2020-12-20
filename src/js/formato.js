@@ -67,7 +67,7 @@ fetchData(API)
                         ${project.description}
                     </p>
                     <p class="project__ubication">
-                        <a class="project__link" href="${project.url}"> Ver más >></a>
+                        <a class="project__link" href="${project.url}"> Ver más &gt;&gt;</a>
                     </p>
                 </div>
 
@@ -194,7 +194,7 @@ let setCardPosts = (posts=[], allTags=globalData.info.allTagsList) =>{
         let tagText = tag.join(", ");
         let newDate = dateStringToNewDate(post.postDate);
         htmlContent +=
-        `   <a class="linkcard" href="${post.url}">
+        `   <a class="linkcard" href="${post.path}">
                 <div class="card1">
                     <figure class="card1__figure">
                         <figcaption class="card1__figcaption">

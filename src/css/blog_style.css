@@ -158,9 +158,6 @@
     .face-pages{
         overflow: scroll;
     }
-    .face-pages__iframe{/* 
-        max-width: 88vw; */
-    }
     .back-next-pentry{
         margin: -15px 0;
     }
