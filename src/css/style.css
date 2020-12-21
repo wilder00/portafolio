@@ -48,6 +48,9 @@ h4,
 h5{
     margin: 0;
 }
+strong{
+    font-weight: 500;
+}
 
 /* Estilos Comparidos*/
 .portfolio__h2,
