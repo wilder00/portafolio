@@ -1,16 +1,157 @@
-
+h5{
+    font-family: 'Work Sans', sans-serif;
+}
 
 .header{
     background-color: #000000e7;
-    height: 180px;
+    height: auto;
+    min-height: 180px;
     overflow: hidden;
     margin-top: -70px;
     position: relative;
     border-bottom: 10px solid #00a0a0d8;
 }
 .hero__h1{
-    margin-top: 100px;
+    margin-top: 100px; 
 }
+
+.posts{
+    color: #3e4756;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 16px;
+}
+
+.posts__area{
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    margin: 0 auto;
+    padding: 0 4.2%;
+}
+.posts__h3{
+    color: #008080;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}
+.posts__description{
+    width: 100%;
+    font-size: 1em;
+    font-weight: 390;
+    color: black;
+}
+.options{
+    display: flex;
+    
+}
+
+.view-type{
+    background-color: #f7f7ff7c;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+.view-type--option{
+    background-color: #cfd5e5cb;
+    height: 35px;
+    width: 35px;
+    padding: 3px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    transform: scale(0.8);
+    transition: transform 0.3s ease 0s, box-shadow 0.3s ease 0s;
+}
+
+.view-type--option:hover{
+    transform: scale(1);
+    box-shadow: 3px 3px 3px 1px #00000033;
+}
+.view-type--selected{
+    transform: scale(1);
+    box-shadow: 3.5px 3.5px 3.5px 1.5px #00000033;
+}
+
+.view-type--block{
+    display: block;
+    width: 40%;
+    height: 40%;
+    background-color: #f7f7ff;
+    border-radius: 3px;
+}
+.view-type--list{
+    background-color: #f7f7ff;
+    width: 90%;
+    height: 15%;
+    border-radius: 3px;
+}
+
+
+.posts__container{
+    margin-top: 25px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.filter{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #f7f7ff;
+    box-shadow: 6px 6px 6px 3px #00000033;
+    font-family: 'Work Sans', sans-serif;
+    overflow-y: scroll;
+    height: 0px;
+    transition: height 1s ease 0s;
+}
+
+.filter__title{
+    padding: 5px 15px;
+    font-size: 15px;
+}
+.filter__container{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+.filter__group1{
+    display: flex;
+    /* flex-flow: [flex-direction] [flex-wrap]; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.filter__element{
+    /*border: 1px solid lightcoral;*/
+    margin: 15px;
+    margin-top: 0;
+}
+.filter__label2{
+    font-size: 14px;
+}
+.filter__input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.filter__tags{
+    margin: 10px 0;
+}
+.filter__checkbox{
+    display: inline-block;
+    width: 170px;
+    height: 30px;
+}
+
 
 .card1__h5{
     padding: 10px;
@@ -19,10 +160,63 @@
     /*background-color: #00000017;
     /*background: #284c9f00;*/
     border-bottom: 10px solid #c68712;
+
+}
+.card1__date{
+    font-size: 0.8em;
+    display: block;
+}
+.card1__tags{
+    font-size: 0.85em;
+    
 }
 .card1__p{
-    font-size: medium;
+    font-size: 1.05em;
 }
 .linkcard{
     text-decoration: none;
+}
+
+
+/************ media queries *********/
+
+@media screen and (max-width: 1023px){
+    .header{
+        min-height: 200px;
+    }
+    .header__hero{
+        top: 60%;
+    }
+
+}
+
+/* @media screen and (max-width: 768px){ */
+@media screen and (max-width: 767px){
+    .header{
+        min-height: 180px;
+    }
+    .header__hero{
+        top: 50%;
+    }
+}
+
+
+/* @media screen and (max-width: 480px){} */
+@media screen and (max-width: 480px){
+    .header{
+        margin-top: -162px;
+        height: 250px;
+    }
+    .header__hero{
+        top: 65%;
+    }
+    .posts{
+        font-size: 14px;
+    }
+    
+}
+
+/* @media screen and (max-width: 320px){} */
+@media screen and (max-width: 320px){
+    
 }
