@@ -1,0 +1,494 @@
+<!DOCTYPE HTML>
+<html lang="es_LA">
+<head>
+	<!-- Identificado:0002-->
+
+	<meta charset="utf-8"/>
+	<!--Moderar Facebook comments-->
+	<meta property="fb:app_id" content="1855828554564238"/>
+	<!-- Fin de moderar facebook comments-->
+
+	<!-- Meta data para reconocimiento al comparttir por redes sosciales -->
+	<meta property="og:url" content="https://www.wildertrujillo.com/blog/2021/febrero/instalar_wordpress.html"/>
+	<meta property="og:type" content="article"/><!-- articulo, video, website -->
+	<meta property="og:title" content="Las 2 fases para instalar wordpress en entorno local | Wilder Trujillo"/>
+	<meta property="og:description" content="Wordpress es un CMS que te permite administrar sitios web en una con una interface hecha para que al usuario le sea fácil de manejar. Si quieres practicar con esta herramienta y estudiarlo, te brindo una guís para que puedas instalarlo."/>
+	<meta property="og:image" content="https://dl.dropboxusercontent.com/s/rzxg5ooip82f9mb/og_instalar_wordpress.JPG"/>
+	
+	<meta property="og:site_name" content="Wilder Trujillo">
+	<meta property="article:published_time" content="2021-02-08">
+	<meta property="article:author" content="https://www.facebook.com/wildertrujillom">
+	<!-- open graph metadata: https://ogp.me/#types -->
+	<!-- Fin Meta data para reconocimiento al comparttir por redes sociales -->
+	
+	<!-- Metatags para twitter-->
+	<meta name="twitter:card" content="summary_large_image"/>
+
+	<meta name="twitter:title" content="Las 2 fases para instalar wordpress en entorno local | Wilder Trujillo"/>
+	<meta name="twitter:description" content="Wordpress es un CMS que te permite administrar sitios web en una con una interface hecha para que al usuario le sea fácil de manejar. Si quieres practicar con esta herramienta y estudiarlo, te brindo una guís para que puedas instalarlo."/>
+	<meta name="twitter:image" content="https://dl.dropboxusercontent.com/s/rzxg5ooip82f9mb/og_instalar_wordpress.JPG"/>
+	<meta name="twitter:site" content="@Wilder_TM"/>
+	<meta name="twitter:creator" content="@Wilder_TM"/>
+	<!-- The card type, which will be one of “summary”, “summary_large_image”, “app”, or “player”. -->
+	<!-- Fin metatag para twitter-->
+	
+	<!-- Metatag para buscadores o bots-->
+	<meta name="title" content="Las 2 fases para instalar wordpress en entorno local | Wilder Trujillo"/>
+	<meta name="description" content="Wordpress es un CMS que te permite administrar sitios web en una con una interface hecha para que al usuario le sea fácil de manejar. Si quieres practicar con esta herramienta y estudiarlo, te brindo una guís para que puedas instalarlo."/>
+	<meta name="keywords" content="instalar wordpress, pasos para instalar wordpress"/>
+	<meta name="robots" content="index, follow"/>
+	<meta name="language" content="Spanish"/>
+	<meta name="author" content="Wilder Trujillo Meza"/>
+	<!-- FIN Metatag para buscadores o bots-->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	
+	<!-- metatag google -->
+	
+	<!-- start: Metatag parte responsive-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- end: Metatag parte del responsive-->
+
+	<title>Las 2 fases para instalar wordpress en entorno local | Wilder Trujillo</title>
+	<link rel="stylesheet" href="/src/css/style.css"/>
+	<link rel="stylesheet" href="/src/css/buttons_style.css"/>
+  <link rel="stylesheet" href="/src/css/blog_style.css"/>
+	<link rel="icon" href="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.png" type="image/png"/>
+	<!-- <link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.ico" type="image/x-icon"/> -->
+
+	<!-- Fonts-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"/> 
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet"/> 
+	
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+	<!-- Script del comentario facebook-->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v9.0&appId=1855828554564238&autoLogAppEvents=1" nonce="b4GpmhFM"></script>
+	<!--Fin de script de comentario para facebook-->
+	<!-- Script de js de Linkedin-->
+	<script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: es_LA</script>
+	<!--Fin de script de comentario para facebook-->
+	
+	<nav class="nav">
+		<figure class="nav__figure">
+			<a href="/">
+				<!--img class="nav__img" src="https://dl.dropboxusercontent.com/s/kvdauusct3q7fn1/wilder%20logo.png" alt="logo de Wilder"-->
+				<img class="nav__img" src="https://dl.dropboxusercontent.com/s/t5n37e74oz7i0mc/logo_wilder_blank.png" alt="logo de Wilder">
+				<figcaption class="nav__figcaption"></figcaption>
+			</a>
+		</figure>
+		<ul class="nav__ul">
+			<li class="nav__li"><a class="nav__a" href="/#about-me">Acerca de Mi</a></li>
+			<li class="nav__li"><a class="nav__a" href="/#portfolio">Portafolio</a></li>
+			<li class="nav__li"><a class="nav__a" href="/#studies">Estudios</a></li>
+			<li class="nav__li"><a class="nav__a" href="#contact-me">Contactame</a></li>
+			<li class="nav__li nav__li--focused"><a class="nav__a" href="/blog" >Blog</a></li>
+		</ul>
+	</nav>
+
+    <header class="header">
+		<figure class="header__figure">
+			<img class="header__img" src="https://dl.dropboxusercontent.com/s/o7ywwi46tvnkg3o/code_computing.jpg" alt="foto de wilder">
+			<figcaption class="header__figcaption"></figcaption>
+		</figure>
+		
+		<div class="header__hero">
+
+			
+		</div>
+
+	</header>
+
+	<!-- boton para subir -->
+	<div id="go-up-button" class="go-up-button--right-buttom button--scale-0" onclick="topFunction()">
+    
+		<div  class="go-up-button button--black1 ">
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+			<span class="go-up-button__arrow"></span>
+		</div>
+		
+	</div>
+
+	<section id="studies" class="studies">
+		<article class="container">
+
+      <div class="entry">
+        <div class="entry__content">
+                
+          <h1 class="entry__title">Las 2 fases para instalar wordpress en entorno local</h1>
+
+          <figure class="entry__main-figure">
+            <img class="entry__main-img" src="https://dl.dropboxusercontent.com/s/rzxg5ooip82f9mb/og_instalar_wordpress.JPG" alt="principal guía de instalación de wordpress">
+            <figcaption class="entry__main-figcaption"></figcaption>
+          </figure>
+
+          <p class="entry__p">
+            Wordpress es un Sistema de gestion de contenido (CMS) que te permite administrar sitios web en una con una vista o interface hecha para el usuario
+            y le sea fácil de manejar. <strong class="entry__p--strong">El objetivo de los CMS es que se le facilite al usuario la administración de su sitio web</strong> ya que hay usuarios que 
+            tiene como objetivo y prioridad la creación de contenido web de forma sencilla y por ello rápida sin lidiar con la parte de la programación o los códigos.
+            Existe servicios en internet que te ofrecen directamente acceso a una cuenta wordpress para que directamente solo te pongas a crear contenido es el caso
+            de <a class="external-link" target="_blank" href="http://www.wordpress.com">WordPress.com</a> que te permite crearte una cuenta gratuita con algunas limitaciones.
+          </p>
+
+          <p class="entry__p">
+            Para personas nuevas como yo, tal vez sea necesario interactuar con su interface para probarlo y estudiarlo de ser necesario. Esto es posible gracias
+            a que <strong class="entry__p--strong">su código está a disposición de cualquiera que desee estudiarlo o instalarlo en su servidor web.</strong> Por ello
+            dejo esta guía para el que desee instalarse wordpress funcionando en su computadora y para mis futuras consultas.
+          </p>
+
+          <h2 class="entry__h2">FASE 1: Instalar XAMPP</h2>
+					
+          <p class="entry__p">
+						Como primer paso necesitamos de un entorno que soporte (es decir que ayude a que wordpress funciones), para ser exactos,<strong class="entry__p--strong"> se necesita
+            de un software que sirva como servidor web y otro que sea de base de datos.</strong> Sin embargo, la instalación de esos servicios se nos facilita gracias a XAMPP, un
+            software que viene con el entorno necesario para usar wordpress.
+            Sus iniciales nos indican los que se va a instalar. La "X" indica el sistema operativo en la que está disponible y quiere decir que funciona en cualquiera de la que conocemos. La "A" indica
+            Apache que es un software que funcionará como servidor web. La "M" viene de MariaDB que es similar a MySql y es un gestor de base de datos. Finalmente las dos "P",
+            el primero indica PHP que es un lenguaje de programación con la que fué hecha Wordpress; la última "P" es de Perl, otro lenguaje de programación que no es indispensable
+            para la instalación de wordpress.
+          </p>
+
+          <p class="entry__p">
+						Lo primero que debemos hacer es descargar el instalador de XAMPP. En el <a class="external-link" target="_blank" href="https://www.apachefriends.org/es/index.html">sitio web de XAMPP</a>
+            Puedes descargarlo para Windows, Linux y Mac. 
+          </p>
+          <figure class="entry__figure--center">
+            <img class="entry__img" src="https://dl.dropboxusercontent.com/s/mfz0ycovqp9xp94/instalar%20xampp.JPG" alt="Descargando XAMPP">
+            <figcaption class="entry__figcaption">Descargando XAMMP de su <a class="figure__link" target="_blank" href="https://www.apachefriends.org/es/index.html">sitio web</a></figcaption>
+					</figure>
+          
+          <div class="cleared"></div>
+          
+          <p class="entry__p">
+						Una vez descargado:
+          </p>
+					<ol class="entry__ol">
+						<li class="ol__li">Ejecutamos el archivo descargado como administrador o simplemente con doble click que nos pedirá permisos para ejecutarlo.</li>
+						<li class="ol__li">El instalador puede darnos alguna advertencia, le damos click en OK.</li>
+						<li class="ol__li">El instalador les dará la bienvenida, le dan click en siguiente (next).</li>
+						<li class="ol__li">Puedes dejar seleccionado todo y dar en next, en mi caso solo mantendré seleccionado los siguientes:
+							<figure class="entry__figure--center">
+								<img class="entry__img" src="https://dl.dropboxusercontent.com/s/y8gz7jencvd57pm/seleccionar%20herramientas%20xampp.JPG" alt="Seleccionando las herramientas a instalar">
+								<figcaption class="entry__figcaption" style="font-weight: 300; font-size: 0.8em;">Herramientas básicas se XAMPP que instalaré.</figcaption>
+							</figure>
+						</li>
+						<li class="ol__li">El instalador nos da la opción de cambiar la ruta de instalación. Dejaré la ruta de instalación por defecto <code class="code--inline">C:\xampp</code> y next.</li>
+						<li class="ol__li">Dejaré el lenguaje por defecto y luego next.</li>
+						<li class="ol__li">Deseleccionare <code class="code--inline">Learn more about Bitnami for XAMPP</code> y luego next.</li>
+						<li class="ol__li">El instalador nos muestra una mensaje indicando que la instalación va a comenzar después de dar next</li>
+						<li class="ol__li">Tomará una poco de tiempo instalarse, pero durante la instalación saldrá una alerta de seguridad y le damos en <code class="code--inline">Permitir acceso</code>.</li>
+						<li class="ol__li">Una vez terminado le das en finalizar (finish) ¡Y ya tenemos XAMPP!</li>
+					</ol>
+
+					<p class="entry__p">
+						<strong class="entry__p--strong">Para probar que todo esté correcto, vamos a correr los dos servicios escenciales, el servidor web y el gestor de base de datos.</strong>
+						Daremos click al botón <code class="code--inline"> start</code> de Apache y MySql. Este debería hacer que en el panel de control de
+						XAMPP se resalten de verde las palabras Apache y MySql. Después, daremos click en el boton <code class="code--inline">Admin</code> de MySql.
+						El panel de control abrirá el navegador con el enlace: <a class="external-link" target="_blank" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a>
+						El enlace apunta al servidor en tu computadora, por lo que si puedes ver el panel de PHPMyAdmin, entonces todo está correcto.
+          </p>
+					
+					<figure class="entry__figure--center">
+            <img class="entry__img" src="https://dl.dropboxusercontent.com/s/6916stmtlhn53m1/panel%20de%20control%20de%20xampp.JPG" alt="Panel de control de XAMPP">
+            <figcaption class="entry__figcaption">Panel de control de XAMPP</figcaption>
+					</figure>
+					
+					<figure class="entry__figure--center">
+            <img class="entry__img" src="https://dl.dropboxusercontent.com/s/lob91extp3l26k3/PHPMyAdmin%20panel%20de%20control.JPG" alt="Panel de control de PHPMyAdmin en localhost">
+            <figcaption class="entry__figcaption">Panel de control de PHPMyAdmin en localhost</figcaption>
+					</figure>
+					
+					<div class="cleared"></div>
+					<div class="space"></div>
+					<div class="space"></div>
+          
+
+
+					<h2 class="entry__h2">FASE 2: Instalar Wordpress</h2>
+					
+					<p class="entry__p">
+						Ahora comenzamos con el objetivo principal de este post. Así que <strong class="entry__p--strong">lo primero es descargar wordpress de su sitio web
+						<a class="external-link" target="_blank" href="https://wordpress.org/download/#download-install">wordpress.org</a>. </strong>
+						Como podemos observar, existe wordpress con .org y .com, por ello debemos fijarnos que estemos en el .org porque el otro es 
+						 wordpress alojado para crearse cuenta y no de la descarga. 
+					</p>
+					
+					<figure class="entry__figure--center">
+            <img class="entry__img" src="https://dl.dropboxusercontent.com/s/ay1kivzm54pz2ow/descargar%20worpress.JPG" alt="Página de descarga de wordpress">
+            <figcaption class="entry__figcaption">Página de descarga de wordpress.org</figcaption>
+					</figure>
+
+					<h3 class="entry__h3">Creando una nueva base de datos</h3>
+					<p class="entry__p">
+						En lo que se descarga vamos a configurar algunos elementos necesarios para que wordpress pueda ejecutarse.
+						<strong class="entry__p--strong">Nos tenemos que dirigir al panel de administración de PHPMyAdmin</strong>
+					</p>
+					
+					<ol class="entry__ol">
+						<li class="ol__li">En el panel de PHPMyAdmin damos click a <code class="code--inline">Nueva</code>.</li>
+						<li class="ol__li">Luego ponemos un nombre a la base de datos (el que desees), en mi caso le puse <code class="code--inline">wilder_wordpress</code>.</li>
+						<li class="ol__li">Finalmente dar click en <code class="code--inline">crear</code>.</li>
+					</ol>
+					<figure class="entry__figure--center">
+            <img class="entry__img" src="https://dl.dropboxusercontent.com/s/62obxa8ho2rrwgw/crear%20una%20base%20de%20datos.JPG" alt="Creando una nueva base de datos en PHPMyAdmin">
+            <figcaption class="entry__figcaption">Creando una nueva base de datos con PHPMyAdmin.</figcaption>
+					</figure>
+
+					<h3 class="entry__h3">Configurando el Wordpress</h3>
+
+					<p class="entry__p">
+						Después que haya terminado la descarga del archivo de wordpress nos quedará un archivo comprimido en formato .zip. Con ese detalle claro, seguirá
+						lo siguiente:
+					</p>
+					<ol class="entry__ol">
+						<li class="ol__li">
+								El comprimido lo tienes que llevar a la ruta donde instalaste xampp, en mi caso fue <code class="code--inline">C:\xampp</code> por ello, estoy copiando el
+								archivo comprimido en la carpeta de dirección <code class="code--inline">C:\xampp\htdocs</code>.
+								<div class="space"></div>
+								<figure class="entry__figure--center">
+									<img class="entry__img" src="https://dl.dropboxusercontent.com/s/c4doe705lpv7he7/worpress%20comprimido%20en%20htdoc%20de%20xampp.JPG" alt="pasando el comprimido de wordpress a htdocs de xampp">
+									<figcaption class="entry__figcaption">Pasando el comprimido de wordpress a htdocs de xampp</figcaption>
+								</figure>
+						</li>
+
+						<li class="ol__li">Ahora, pasamos a descomprimirlo. Ello nos dará como resultado una carpeta llamada "wordpress", puedes dejarlo como está o cambiarle de nombre. En mi caso, le cambiaré a <code class="code--inline">wilder</code>.</li>
+						<li class="ol__li">Después, necesitaremos entrar a la carpeta de wordpress que descomprimimos y encontrar el archivo llamado <code class="code--inline">wp-config-sample.php</code> </li>
+						<li class="ol__li">Tenemos que cambiarle el nombre del archivo de <code class="code--inline">wp-config-sample.php</code> a <code class="code--inline">wp-config.php</code>, es decir quitarle el <code class="code--inline">-sample</code>.</li>
+						<li class="ol__li">Ese mismo archivo lo tenemos que abrir con algún editor de texto y porner la información de la base de datos que creamos en PHPMyAdmin.
+
+							<ul class="entry__ul">
+								<li class="ul__li">En la linea 23, ponemos en el segundo parámetro el nombre que le dimos a la base de datos que creamos, en mi caso fue <code class="code--inline">wilder_wordpress</code></li>
+								<li class="ul__li">En la linea 26, ponemos en el usuario de la base de datos, en nuestro caso no lo creamos, pero por defecto xammp crea <code class="code--inline">root</code></li>
+								<li class="ul__li">En la linea 29, ponemos la constraseña del usuario, el usuario que se crea con XAMPP no tiene constraseña así que se deja vacío con las comillas simple<code class="code--inline">''</code></li>
+								<li class="ul__li">En la linea 32, 35 y 38, lo dejamos como está</li>
+							</ul>
+							<div class="space"></div>
+							<figure class="entry__figure--center">
+								<img class="entry__img" src="https://dl.dropboxusercontent.com/s/zfs4byolilyk7gh/definiendo%20informaci%C3%B3n%20de%20la%20conexion%20a%20la%20base%20de%20datos.JPG" alt="definiendo la información de la base de datos en wordpress">
+								<figcaption class="entry__figcaption">Definiendo la información de la base de datos en wordpress</figcaption>
+							</figure>
+						</li>
+
+						<li class="ol__li"> Ahora nos toca poner los SALT Keys que genera automáticamente Worpress con su API en <a class="external-link" target="_blank" href="http://api.wordpress.org/secret-key/1.1/salt">http://api.wordpress.org/secret-key/1.1/salt</a> 
+
+							<ul class="entry__ul">
+								<li class="ul__li">De la linea 49 al 56, se completa con el API generador de salt de wordpress.org. Cada Salt que se genera con su api es distinta así que se sustituye toda esas lineas como se muestra en la imagen siguiente.</li>
+							</ul>
+							
+							<div class="space"></div>
+							<figure class="entry__figure--center">
+								<img class="entry__img" src="https://dl.dropboxusercontent.com/s/zr9b8l720ynavg9/cambiamos%20el%20salt%20de%20wordpress.JPG" alt="Cambiamos el salt de wordpress usando su API">
+								<figcaption class="entry__figcaption">Cambiamos el salt de wordpress usando su API</figcaption>
+							</figure>
+						</li>
+
+						<li class="ol__li">Finalmente, guardas las configuraciones y te vas al navegador y pones la url <code class="code--inline">http://localhost/wilder</code> en mi caso es wilder porque le cambié el nombre de la carpeta de wordpress al descomprimirla. Al darle enter, debería aparecer el formulario para registrarte como usuario y administrador del sitio web.</li>
+					</ol>
+					
+					
+					<h3 class="entry__h3">Registrandose en wordpress</h3>
+
+					<p class="entry__p">
+						Solo nos queda registrarnos en wordpress para empezar a crear y editar contenido en nuestro entorno local. al ir a la url mencionada anteriormente, que en mi caso es
+						<code class="code--inline">http://localhost/wilder</code> saldrá formulario para que te registres fácil de seguir.
+					</p>
+
+					<figure class="entry__figure--center">
+						<img class="entry__img" src="https://dl.dropboxusercontent.com/s/3mhomf6jx907amo/Bienvenida%20a%20wordpress%20con%20configuraci%C3%B3n%20inicial.JPG" alt="Nos registramos en el wordpress que instalamos">
+						<figcaption class="entry__figcaption">Nos registramos en el wordpress que instalamos</figcaption>
+					</figure>
+
+					<p class="entry__p">
+						Rellenas cada campo con lo que creas conveniente y después de darle al botón <code class="code--inline">install wordpress</code> te pedirá que inicies sesión con los credenciales del
+						registro y con eso ya está instalado wordpress.
+					</p>
+
+					<div class="space"></div>
+					<span class="nota">Nota: Haciendo éste artículo me di cuenta de la importancia de un CMS para crear contenido, hacerlo a puro html ¡toma mucho tiempo!</span>
+					<!-- Fin de contenido del articulo -->
+					
+
+          <div class="entry__details">
+						<div class="entry__date"><small class="entry__small-date">08 de Febrero del 2021</small></div>
+            <div class="entry__tags"><small class="entry__small">wordpress</small></div>
+					</div>
+					<div class="space"></div>
+
+				</div>
+      </div>
+		</article>
+	</section>
+		
+	<section class="entry__content">
+		<div class="back-next-entries">
+			<div class="back-next-entry">
+				<small class="back-next-entries__changer">&lt;&lt;</small><a class="back-next-entries__link" href="../../2020/diciembre/1-mi_primer_sitio_web.html"> <span>Entrada anterior:</span>  Mi primer sitio web </a>
+			</div>
+			<div class="back-next-entry">
+				<!-- <a class="back-next-entries__link" href="http://"> <span>Entrada siguiente:</span> ¿Cuanto se? </a> <small class="back-next-entries__changer"> &gt;&gt;</small> -->
+			</div>
+		</div>
+
+		<div class="social-area">
+			<div class="face-save" style="margin: 5px 0;">
+				<div class="fb-save" data-uri="https://www.wildertrujillo.com/blog/2021/febrero/instalar_wordpress.html" data-size="small"></div>	
+			</div>
+
+			<div class="likes">				
+				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.wildertrujillo.com%2Fblog%2F2021%2Ffebrero%2Finstalar_wordpress.html&width=320&layout=standard&action=like&size=small&share=true&height=40&appId=1855828554564238" width="320" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+				
+				<!-- Share on linkedin-->
+				<div class="linkedin-share">
+					
+					<script type="IN/Share" data-url="https://www.wildertrujillo.com/blog/2021/febrero/instalar_wordpress.html"></script>
+				</div>
+				<!-- End Share on linkedin-->
+			</div>
+
+			<div class="comments">
+				<h5 class="social__titles"> Dejame tu comentario: </h5>
+				<div class="fb-comments" data-href="https://www.wildertrujillo.com/blog/2021/febrero/instalar_wordpress.html" data-width="100%" data-numposts="20"></div>
+			</div>
+			
+			<div class="face-pages">
+				<h5 class="social__titles">Puedes seguirme: </h5>
+				<iframe class="face-pages__iframe" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwildertrujillom&tabs&width=500&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1855828554564238" width="500" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+			</div>
+		</div>
+		<div class="space"></div>
+
+		<div class="newsletter">
+			<!-- Begin Mailchimp Signup Form -->
+			<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+			<style type="text/css">
+				#mc_embed_signup{background:#fff; clear:left; font:14px 'Work Sans', sans-serif,Helvetica,Arial,sans-serif;color:rgb(43, 43, 43);border-radius: 10px; box-shadow: 6px 6px 6px 3px rgba(0, 0, 0, 0.2);}
+				/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+				We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+			</style>
+			<div id="mc_embed_signup">
+			<form action="https://wildertrujillo.us7.list-manage.com/subscribe/post?u=e9baa5a24c2c96dcb621fc6e9&amp;id=0e67927a06" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<div id="mc_embed_signup_scroll">
+				<h2>Suscríbete</h2>
+			<div class="indicates-required"><span class="asterisk">*</span> campos requeridos</div>
+			<div class="mc-field-group">
+				<label for="mce-EMAIL">Correo Electrónico  <span class="asterisk">*</span>
+			</label>
+				<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+			</div>
+			<div class="mc-field-group">
+				<label for="mce-FNAME">Primer Nombre  <span class="asterisk">*</span>
+			</label>
+				<input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+			</div>
+			<div class="mc-field-group">
+				<label for="mce-LNAME">Apellido </label>
+				<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+			</div>
+			<div class="mc-field-group size1of2">
+				<label for="mce-BIRTHDAY-month">Cumpleaños </label>
+				<div class="datefield">
+					<span class="subfield dayfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day"></span> / 
+					<span class="subfield monthfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month"></span> 
+					<span class="small-meta nowrap">( dd / mm )</span>
+				</div>
+			</div>	<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e9baa5a24c2c96dcb621fc6e9_0e67927a06" tabindex="-1" value=""></div>
+				<div class="clear"><input type="submit" value="Subscribirse" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+				</div>
+			</form>
+			</div>
+			<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday'; /*
+			* Translated default messages for the $ validation plugin.
+			* Locale: ES
+			*/
+			$.extend($.validator.messages, {
+			required: "Este campo es obligatorio.",
+			remote: "Por favor, rellena este campo.",
+			email: "Por favor, escribe una dirección de correo válida",
+			url: "Por favor, escribe una URL válida.",
+			date: "Por favor, escribe una fecha válida.",
+			dateISO: "Por favor, escribe una fecha (ISO) válida.",
+			number: "Por favor, escribe un número entero válido.",
+			digits: "Por favor, escribe sólo dígitos.",
+			creditcard: "Por favor, escribe un número de tarjeta válido.",
+			equalTo: "Por favor, escribe el mismo valor de nuevo.",
+			accept: "Por favor, escribe un valor con una extensión aceptada.",
+			maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
+			minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
+			rangelength: $.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
+			range: $.validator.format("Por favor, escribe un valor entre {0} y {1}."),
+			max: $.validator.format("Por favor, escribe un valor menor o igual a {0}."),
+			min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
+			});}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+			<!--End mc_embed_signup-->
+		</div>
+
+		<div class="space"></div>
+	</section>
+
+
+	<section id="contact-me" class="contact-me">
+		<div class="container">
+			<article class="contact-me__area">
+				<div class="contact-me__social-media-list">
+
+					<figure  class="contact-me__social-media">
+						<img class="contact-me__net-icon" src="https://static-exp1.licdn.com/sc/h/1bt1uwq5akv756knzdj4l6cdc" alt="linkedin">
+						<figcaption class="contact-me__net-name">
+							<a class="contact-me__info" href="https://www.linkedin.com/in/wilder-trujillo/" target="_blank">wilder-trujillo</a>
+						</figcaption>
+					</figure>
+
+					<figure  class="contact-me__social-media">
+						<img class="contact-me__net-icon" src="https://github.githubassets.com/favicons/favicon.svg" alt="github">
+						<figcaption class="contact-me__net-name">
+							<a class="contact-me__info" href="https://github.com/wilder00" target="_blank">wilder00</a>
+						</figcaption>
+					</figure>
+					
+					<figure  class="contact-me__social-media">
+						<img class="contact-me__net-icon" src="https://static.xx.fbcdn.net/rsrc.php/yD/r/d4ZIVX-5C-b.ico" alt="facebook">
+						<figcaption class="contact-me__net-name">
+							<a class="contact-me__info" href="https://www.facebook.com/wildertrujillom" target="_blank">wildertrujillom</a>
+						</figcaption>
+					</figure>
+
+					<figure  class="contact-me__social-media">
+						<img class="contact-me__net-icon" src="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" alt="instagram">
+						<figcaption class="contact-me__net-name">
+							<a class="contact-me__info" href="https://www.instagram.com/wilder_trujillo" target="_blank">wilder_trujillo</a>
+						</figcaption>
+					</figure>
+				
+				</div>
+			</article>
+		</div>
+	</section>
+
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__area">
+				<p class="footer__p">
+					Este es el final de mi sitio web, agradezco mucho que lo hayan leido.
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="/src/js/button-behaviors.js"></script>
+	
+	
+</body>
+</html>
