@@ -69,6 +69,25 @@
 
 # End of https://www.toptal.com/developers/gitignore/api/images
 
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
+
+
 #para mi carpeta
 src/img/*.jpeg
 src/img/*.png
@@ -78,3 +97,14 @@ src/img/*.svg
 src/fonts/*.ttf
 
 src/no-api/*
+
+#los cambiados a docs
+
+docs/src/img/*.jpeg
+docs/src/img/*.png
+docs/src/img/*.jpg
+docs/src/img/*.svg
+
+docs/src/fonts/*.ttf
+
+docs/src/no-api/*
