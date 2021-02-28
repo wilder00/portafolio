@@ -254,70 +254,25 @@
 
 		<div class="newsletter">
 			<!-- Begin Mailchimp Signup Form -->
-			<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-			<style type="text/css">
-				#mc_embed_signup{background:#fff; clear:left; font:14px 'Work Sans', sans-serif,Helvetica,Arial,sans-serif;color:rgb(43, 43, 43);border-radius: 10px; box-shadow: 6px 6px 6px 3px rgba(0, 0, 0, 0.2);}
-				/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-				We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-			</style>
-			<div id="mc_embed_signup">
-			<form action="https://wildertrujillo.us7.list-manage.com/subscribe/post?u=e9baa5a24c2c96dcb621fc6e9&amp;id=0e67927a06" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-				<div id="mc_embed_signup_scroll">
-				<h2>Suscríbete</h2>
-			<div class="indicates-required"><span class="asterisk">*</span> campos requeridos</div>
-			<div class="mc-field-group">
-				<label for="mce-EMAIL">Correo Electrónico  <span class="asterisk">*</span>
-			</label>
-				<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-			</div>
-			<div class="mc-field-group">
-				<label for="mce-FNAME">Primer Nombre  <span class="asterisk">*</span>
-			</label>
-				<input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
-			</div>
-			<div class="mc-field-group">
-				<label for="mce-LNAME">Apellido </label>
-				<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-			</div>
-			<div class="mc-field-group size1of2">
-				<label for="mce-BIRTHDAY-month">Cumpleaños </label>
-				<div class="datefield">
-					<span class="subfield dayfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day"></span> / 
-					<span class="subfield monthfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month"></span> 
-					<span class="small-meta nowrap">( dd / mm )</span>
+			<!-- Begin Mailchimp Signup Form -->
+				<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+				<style type="text/css">
+					#mc_embed_signup{background:#fff; clear:left; font:14px 'Work Sans', sans-serif,Helvetica,Arial,sans-serif;color:rgb(43, 43, 43);border-radius: 10px; box-shadow: 6px 6px 6px 3px rgba(0, 0, 0, 0.2);}
+					/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+					We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+				</style>
+				<div id="mc_embed_signup">
+				<form action="https://wildertrujillo.us7.list-manage.com/subscribe/post?u=e9baa5a24c2c96dcb621fc6e9&amp;id=0e67927a06" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<div id="mc_embed_signup_scroll">
+					<label for="mce-EMAIL">Suscribete</label>
+					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e9baa5a24c2c96dcb621fc6e9_0e67927a06" tabindex="-1" value=""></div>
+					<div class="clear"><input type="submit" value="Suscribir" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+					</div>
+				</form>
 				</div>
-			</div>	<div id="mce-responses" class="clear">
-					<div class="response" id="mce-error-response" style="display:none"></div>
-					<div class="response" id="mce-success-response" style="display:none"></div>
-				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e9baa5a24c2c96dcb621fc6e9_0e67927a06" tabindex="-1" value=""></div>
-				<div class="clear"><input type="submit" value="Subscribirse" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-				</div>
-			</form>
-			</div>
-			<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday'; /*
-			* Translated default messages for the $ validation plugin.
-			* Locale: ES
-			*/
-			$.extend($.validator.messages, {
-			required: "Este campo es obligatorio.",
-			remote: "Por favor, rellena este campo.",
-			email: "Por favor, escribe una dirección de correo válida",
-			url: "Por favor, escribe una URL válida.",
-			date: "Por favor, escribe una fecha válida.",
-			dateISO: "Por favor, escribe una fecha (ISO) válida.",
-			number: "Por favor, escribe un número entero válido.",
-			digits: "Por favor, escribe sólo dígitos.",
-			creditcard: "Por favor, escribe un número de tarjeta válido.",
-			equalTo: "Por favor, escribe el mismo valor de nuevo.",
-			accept: "Por favor, escribe un valor con una extensión aceptada.",
-			maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
-			minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
-			rangelength: $.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
-			range: $.validator.format("Por favor, escribe un valor entre {0} y {1}."),
-			max: $.validator.format("Por favor, escribe un valor menor o igual a {0}."),
-			min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
-			});}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+			<!--End mc_embed_signup-->
 			<!--End mc_embed_signup-->
 		</div>
 
@@ -331,7 +286,7 @@
 				<div class="contact-me__social-media-list">
 
 					<figure  class="contact-me__social-media">
-						<img class="contact-me__net-icon" src="https://static-exp1.licdn.com/sc/h/1bt1uwq5akv756knzdj4l6cdc" alt="linkedin">
+						<img class="contact-me__net-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/600px-Linkedin.svg.png" alt="linkedin">
 						<figcaption class="contact-me__net-name">
 							<a class="contact-me__info" href="https://www.linkedin.com/in/wilder-trujillo/" target="_blank">wilder-trujillo</a>
 						</figcaption>
