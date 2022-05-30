@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: wildertrujillo.com
+Token: 13d8e060b0511798c3f5657a9825a8d9df893a5f791e4ded640430e2f98316bf
